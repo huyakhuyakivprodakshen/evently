@@ -1,0 +1,39 @@
+include utility/_mixins
+doctype html
+html
+  head
+    include includes/_head
+  body
+    h1.logo.logo--main
+      a(href="#") event
+        span
+          | ly
+    h1.logo.logo--alt
+      a(href="#") evently
+    +list-nav('home','about','speakers','program','blog','sponsor','contact')
+    time.label-promo-date(datetime="2016-10-15/2016-10-21") 15-21 October
+    h1.header-promo london
+    button.btn-promo Join the 
+      strong Conference
+    .btn-scroll 
+      button.btn-scroll__icon
+      span.btn-scroll__caption scroll down
+    button.btn-slider.btn-slider--prev
+    button.btn-slider.btn-slider--next
+    +list-btn('list-h__item--social','btn-social ','btn-social--fb','btn-social--twitter','btn-social--gplus','btn-social--in')
+    button.btn-join Join the 
+      strong Conference
+    button.btn-send send
+    +list-btn('list-h__item--social-alt','btn-social-alt ','btn-social-alt--fb','btn-social-alt--twitter','btn-social-alt--gplus','btn-social-alt--in')
+    h1.header-section about
+    h1.header-section-alt about
+    h1.header-subject kane w. doe
+    h1.header-caption business conference
+    h1.header-caption-alt digital designer
+    p.p-common Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu. 
+      br
+      | Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula. 
+    p.p-common-alt Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu. 
+      br
+      | Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula. 
+    

@@ -1,0 +1,109 @@
+.btn-promo
+  @extend %_btn-solid
+  +size(320px, 70px)
+  color: $color-text-primary
+  font: 600 24px $font-family-raleway
+  background-color: $color-bg-decorate
+  position: relative
+  &:active
+    top: 2px
+  strong
+    font-weight: 800
+
+.btn-scroll
+  display: inline-block
+  text-align: center
+  &__icon
+    @extend %_btn-icon
+    +size(36px, 46px)
+    +border(2, $color-bg-decorate)
+    margin-bottom: 15px
+    position: relative
+    &:after
+      @extend %_bg-sprite
+      +size(10px, 17px)
+      +c-align
+      +pseudo
+      background-position: -57px -5px
+  &__caption
+    display: block
+    text-transform: uppercase
+    color: $color-text-decorate
+    font: 14px $font-family-raleway
+
+.btn-slider
+  @extend %_btn-icon
+  +border(2, $color-bg-decorate)
+  +size(63px)
+  position: relative
+  &--prev:after, &--next:after
+    @extend %_bg-sprite
+    +size(25px, 16px)
+    +c-align
+    +pseudo
+  &--prev:after
+    background-position: -77px -31px
+  &--next:after
+    background-position: -77px -5px
+
+.btn-social
+  @extend %_btn-icon-solid
+  @extend %_bg-sprite
+  +size(32px)
+  &--fb
+    background-position: -5px -57px
+  &--twitter
+    background-position: -5px -99px
+  &--gplus
+    background-position: -65px -57px
+  &--in
+    background-position: -107px -57px
+
+.btn-social-alt
+  @extend %_btn-icon
+  +size(38px)
+  +border(2, $color-bg-secondary)
+  position: relative
+  &--fb:after, &--twitter:after, &--gplus:after, &--in:after
+    @extend %_bg-sprite
+    +size(16px)
+    +c-align
+    +pseudo
+  &--fb:after
+    background-position: -43px -57px
+  &--twitter:after
+    background-position: -47px -99px
+  &--gplus:after
+    background-position: -112px -5px
+  &--in:after
+    background-position: -112px -31px
+
+.btn-join
+  @extend %_btn-solid
+  +size(100%, 65px)
+  background-color: $color-bg-decorate
+  font: 600 24px $font-family-raleway
+  color: $color-text-primary
+  text-align: left
+  padding-left: 30px
+  position: relative
+  &:after
+    @extend %_bg-sprite
+    +size(25px, 16px)
+    +pseudo
+    background-position: -5px -31px
+    +v-align
+    right: 30px
+  strong
+    font-weight: 800
+
+.btn-send
+  @extend %_btn-solid
+  color: $color-text-decorate
+  background-color: $color-bg-secondary
+  text-transform: uppercase
+  text-align: center
+  font: 700 18px $font-family-raleway
+  position: relative
+  &:active
+    top: 2px

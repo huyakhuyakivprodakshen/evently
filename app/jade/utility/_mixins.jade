@@ -1,0 +1,10 @@
+mixin list-nav(...links)
+  ul.list-h
+    each link in links
+      li.list-h__item
+        a.link-nav(href="#"+link)= link
+mixin list-btn(liclass, btnclass, ...btns)
+  ul.list-h
+    each btn in btns
+      li(class='list-h__item '+liclass)
+        button(class=btnclass+btn)
