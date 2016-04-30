@@ -7,65 +7,623 @@
     <meta name="description" content="evently">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/custom-scrollbar.css">
     <link rel="shortcut icon" href="img/design/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/design/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <h1 class="logo logo--main"><a href="#">event<span>ly</span></a></h1>
-    <h1 class="logo logo--alt"><a href="#">evently</a></h1>
-    <ul class="list-h">
-      <li class="list-h__item"><a href="#home" class="link-nav">home</a></li>
-      <li class="list-h__item"><a href="#about" class="link-nav">about</a></li>
-      <li class="list-h__item"><a href="#speakers" class="link-nav">speakers</a></li>
-      <li class="list-h__item"><a href="#program" class="link-nav">program</a></li>
-      <li class="list-h__item"><a href="#blog" class="link-nav">blog</a></li>
-      <li class="list-h__item"><a href="#sponsor" class="link-nav">sponsor</a></li>
-      <li class="list-h__item"><a href="#contact" class="link-nav">contact</a></li>
-    </ul>
-    <time datetime="2016-10-15/2016-10-21" class="label-promo-date">15-21 October</time>
-    <h1 class="header-promo">london</h1>
-    <button class="btn-promo">Join the <strong>Conference</strong></button>
-    <div class="btn-scroll"> 
-      <button class="btn-scroll__icon"></button><span class="btn-scroll__caption">scroll down</span>
+    <div class="page">
+      <div class="top-wrapper">
+        <header class="header">
+          <h3 class="header__logo logo logo--main"><a href="#">event<span>ly</span></a></h3>
+          <button id="btn-burger" class="header__burger btn-burger">&#9776;</button>
+          <ul id="header-nav" class="header__nav list-h">
+            <li class="list-h__item"><a href="#" class="link-nav">home</a></li>
+            <li class="list-h__item"><a href="#" class="link-nav">about</a></li>
+            <li class="list-h__item"><a href="#" class="link-nav">speakers</a></li>
+            <li class="list-h__item"><a href="#" class="link-nav">program</a></li>
+            <li class="list-h__item"><a href="#" class="link-nav">blog</a></li>
+            <li class="list-h__item"><a href="#" class="link-nav">sponsor</a></li>
+            <li class="list-h__item"><a href="#" class="link-nav">contact</a></li>
+          </ul>
+          <time datetime="2016-10-15/2016-10-21" class="header__promo-date label-promo-date">15-21 October</time>
+          <h1 class="header__promo-header header-promo">london</h1>
+          <h2 class="header__promo-header label-promo-caption">business <strong>conference</strong></h2>
+          <div class="header__promo-button">
+            <button class="btn-promo">Join the <strong>Conference</strong></button>
+          </div>
+          <ul class="list-h header__timer">
+            <li class="list-h__item--timer">
+              <div class="label-timer-piece"> 
+                <div class="label-timer-piece__text"><strong id="timer-day"></strong><span>days</span></div>
+              </div>
+            </li>
+            <li class="list-h__item--timer">
+              <div class="label-timer-piece"> 
+                <div class="label-timer-piece__text"><strong id="timer-hour"></strong><span>hours</span></div>
+              </div>
+            </li>
+            <li class="list-h__item--timer">
+              <div class="label-timer-piece">
+                <div class="label-timer-piece__text"><strong id="timer-min"></strong><span>min.</span></div>
+              </div>
+            </li>
+            <li class="list-h__item--timer">
+              <div class="label-timer-piece"> 
+                <div class="label-timer-piece__text"><strong id="timer-sec"></strong><span>sec.</span></div>
+              </div>
+            </li>
+          </ul>
+          <div class="header__btn-scroll">
+            <div class="btn-scroll"> 
+              <button class="btn-scroll__icon">
+                <svg>
+                  <use xlink:href="img/design/sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </button><span class="btn-scroll__caption">scroll down</span>
+            </div>
+          </div>
+        </header>
+        <section class="about">
+          <div class="col-50 col-left-padded">
+            <div class="img-wrapper"><img src="img/design/about-bg.jpg" class="image"></div>
+          </div>
+          <div class="col-50 col-right-padded--alt">
+            <h4 class="section__header--alt header-section header-section--primary">about</h4>
+            <h5 class="section__subject header-subject">London</h5>
+            <h6 class="section__caption header-caption">Business Conference</h6>
+            <time class="section__date label-caption label-caption--date">15 - 21 October</time>
+            <div class="section__text">
+              <p class="p-common">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu. </p>
+              <p class="section__p section__p p-common">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="speakers">
+        <div class="col-50 col-left-padded">
+          <h4 class="header-section header-section--secondary">speakers</h4>
+          <ul id="slider-info" class="list-slider">
+            <li class="list-slider__item">
+              <h5 class="section__subject header-subject">Kane W. Doe  </h5>
+              <h6 class="section__caption header-caption-alt">Digital Designer</h6>
+              <div class="section__text">
+                <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+                <p class="p-common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+              </div>
+              <div class="section__contacts"><a href="mailto:#" class="link-email"> <strong>kanew.doe</strong>@conference.co</a>
+                <ul class="section__social list-h">
+                  <li class="list-h__item--social">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="list-h__item--social">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="list-h__item--social">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="list-h__item">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-linkedin-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="list-slider__item hidden">
+              <h5 class="section__subject header-subject">Emma Watson  </h5>
+              <h6 class="section__caption header-caption-alt">Senior developer</h6>
+              <div class="section__text">
+                <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+                <p class="p-common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+              </div>
+              <div class="section__contacts"><a href="mailto:#" class="link-email"> <strong>emma.watson</strong>@conference.co</a>
+                <ul class="section__social list-h">
+                  <li class="list-h__item--social">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="list-h__item--social">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="list-h__item--social">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="list-h__item">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-linkedin-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="list-slider__item hidden">
+              <h5 class="section__subject header-subject">Carl Johnson  </h5>
+              <h6 class="section__caption header-caption-alt">Stock exchange trader</h6>
+              <div class="section__text">
+                <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+                <p class="p-common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+              </div>
+              <div class="section__contacts"><a href="mailto:#" class="link-email"> <strong>carl.johnson</strong>@conference.co</a>
+                <ul class="section__social list-h">
+                  <li class="list-h__item--social">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="list-h__item--social">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="list-h__item--social">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="list-h__item">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-linkedin-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="list-slider__item hidden">
+              <h5 class="section__subject header-subject">Constantine Stromberg  </h5>
+              <h6 class="section__caption header-caption-alt">CEO</h6>
+              <div class="section__text">
+                <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+                <p class="p-common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+              </div>
+              <div class="section__contacts"><a href="mailto:#" class="link-email"> <strong>c.stromberg</strong>@conference.co</a>
+                <ul class="section__social list-h">
+                  <li class="list-h__item--social">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="list-h__item--social">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="list-h__item--social">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="list-h__item">
+                    <button class="btn-social">
+                      <svg>
+                        <use xlink:href="img/design/sprite.svg#icon-linkedin-s"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-50">
+          <div id="slider-speaker" class="img-wrapper">
+            <div class="overlay"></div><img src="img/content/speaker-1.jpg" class="image"><img src="img/content/speaker-2.jpg" class="image"><img src="img/content/speaker-3.jpg" class="image"><img src="img/content/speaker-4.jpg" class="image">
+            <button class="slider__prev btn-slider">
+              <svg>
+                <use xlink:href="img/design/sprite.svg#icon-arrow-left"></use>
+              </svg>
+            </button>
+            <button class="slider__next btn-slider">
+              <svg>
+                <use xlink:href="img/design/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="shedule">
+        <div class="col-50">
+          <div class="img-wrapper">
+            <div class="shedule__caption label-shedule-caption"><span>business </span><strong> <em>&amp;</em><br>idea</strong></div><img src="img/design/shedule-bg.jpg" width="960" height="700" class="image">
+          </div>
+        </div>
+        <div class="col-50 col-right-padded--alt">
+          <h4 class="header-section header-section--primary">shedule</h4>
+          <h5 class="section__subject header-subject">15 October</h5>
+          <h6 class="section__caption header-caption">Business Conference</h6>
+          <ul class="section__shedule list-shedule">
+            <li class="label-shedule-item">
+              <time>09:00</time><span>Business idea &amp; concept</span>
+            </li>
+            <li class="label-shedule-item">
+              <time>12:00</time><span>Business conference details</span>
+            </li>
+            <li class="label-shedule-item">
+              <time>15:00</time><span>Conference calling</span>
+            </li>
+            <li class="label-shedule-item">
+              <time>18:00</time><span>Something else</span>
+            </li>
+            <li class="label-shedule-item">
+              <time>21:00</time><span>Afterparty</span>
+            </li>
+          </ul>
+          <ul class="section__pager list-h">
+            <li class="list-h__item--pager">
+              <button class="button-page button-page--active">.01</button>
+            </li>
+            <li class="list-h__item--pager">
+              <button class="button-page">.02</button>
+            </li>
+            <li class="list-h__item--pager">
+              <button class="button-page">.03</button>
+            </li>
+            <li class="list-h__item">
+              <button class="button-page">.04</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="register">
+        <h4 class="header-section header-section--secondary">register & pricing</h4>
+        <div class="col-50 col-50--sm">
+          <h5 class="section__subject header-subject">Join conference</h5>
+          <h6 class="section__caption header-caption-alt">London conference</h6>
+          <div class="section__text--sm">
+            <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+          </div>
+          <div class="section__contacts"><a href="mailto:#" class="link-email"> <strong>kanew.doe</strong>@conference.co</a>
+            <ul class="section__social list-h">
+              <li class="list-h__item--social">
+                <button class="btn-social">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="list-h__item--social">
+                <button class="btn-social">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="list-h__item--social">
+                <button class="btn-social">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="list-h__item">
+                <button class="btn-social">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-linkedin-s"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-50 col-50--sm">
+          <form class="register__form">
+            <input placeholder="Name &amp; Surname" class="input">
+            <input placeholder="Email Address" class="section__input input">
+            <input placeholder="Phone Number" class="section__input input">
+            <div class="select-wrapper section__input">
+              <select>
+                <option disabled selected>Select your plan...</option>
+                <option>$ 101 - Personal</option>
+                <option>$ 114 - Business</option>
+                <option>$ 120 - Company</option>
+              </select>
+            </div>
+            <button class="section__input btn-join">Join the <strong>Conference</strong>
+              <svg>
+                <use xlink:href="img/design/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="plans">
+        <div class="row">
+          <div class="cell">
+            <div class="plan plan--regular">
+              <div class="plan__content"><strong class="plan__name-regular">personal</strong><strong class="plan__price-regular">101<sup> <span>.00</span><strong> $</strong></sup></strong>
+                <p class="plan__feature plan__feature--regular">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                  </svg><span>Lipsum dolor sit amet</span>
+                </p>
+                <p class="plan__feature plan__feature--regular">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                  </svg><span>Etiam id lacinia risus, at vehicula lectus</span>
+                </p>
+                <p class="plan__feature plan__feature--regular">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                  </svg><span>Fusce porttitor quis enim</span>
+                </p>
+                <p class="plan__feature plan__feature--regular">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                  </svg><span>Vestibulum molestie</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="cell-40">
+            <div class="plan plan--promo">
+              <div class="plan__content"><strong class="plan__name-promo">business</strong><strong class="plan__price-promo">114<sup> <span>.00</span><strong> $</strong></sup></strong>
+                <p class="plan__feature plan__feature--promo">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                  </svg><span>Ut ac tempor lectus. Curabitur a neque odio. Lorem ipsum dolor</span>
+                </p>
+                <p class="plan__feature plan__feature--promo">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                  </svg><span>Etiam sit amet arcu et lacus tincidunt elementum. Vestibulum molestie vestibulum</span>
+                </p>
+                <p class="plan__feature plan__feature--promo">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                  </svg><span>Morbi eget arcu a massa ultricies egestas</span>
+                </p>
+                <p class="plan__feature plan__feature--promo">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                  </svg><span>Suspendisse ut lobortis nisl. Mauris non porttitor mi</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="cell">
+            <div class="plan plan--regular">
+              <div class="plan__content"><strong class="plan__name-regular">company</strong><strong class="plan__price-regular">120<sup> <span>.00</span><strong> $</strong></sup></strong>
+                <p class="plan__feature plan__feature--regular">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                  </svg><span>Lipsum dolor sit amet</span>
+                </p>
+                <p class="plan__feature plan__feature--regular">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                  </svg><span>Etiam id lacinia risus, at vehicula lectus</span>
+                </p>
+                <p class="plan__feature plan__feature--regular">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                  </svg><span>Fusce porttitor quis enim</span>
+                </p>
+                <p class="plan__feature plan__feature--regular">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                  </svg><span>Vestibulum molestie</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq">
+        <div class="col-50">
+          <div class="img-wrapper"><img src="img/design/faq-bg.jpg" width="960" height="700" class="image"></div>
+        </div>
+        <div class="col-50 col-right-padded--alt">
+          <h4 class="header-section header-section--primary">FAQ</h4>
+          <h5 class="section__subject header-subject">Event FAQ</h5>
+          <h6 class="section__caption header-caption">Find your answers</h6>
+        </div>
+      </section>
+      <section class="blog">
+        <div class="col-50 col-left-padded">
+          <h4 class="header-section header-section--secondary">blog</h4>
+          <h5 class="section__subject header-subject">Business idea</h5>
+          <h6 class="section__caption header-caption-alt">Kane W. Doe</h6>
+          <div class="section__text">
+            <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu. </p>
+            <p class="section__p p-common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+          </div>
+          <div class="section__contacts"><a href="#" class="link-email"> <strong>15 October 2015</strong></a>
+            <ul class="section__social list-h">
+              <li class="list-h__item--social">
+                <button class="btn-social">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="list-h__item--social">
+                <button class="btn-social">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="list-h__item--social">
+                <button class="btn-social">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="list-h__item">
+                <button class="btn-social">
+                  <svg>
+                    <use xlink:href="img/design/sprite.svg#icon-linkedin-s"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-50">
+          <div id="slider-blog" class="img-wrapper"><img src="img/content/blog-1.jpg" class="image"><img src="img/content/blog-2.jpg" class="image"><img src="img/content/blog-3.jpg" class="image"><img src="img/content/blog-4.jpg" class="image">
+            <button class="slider__prev btn-slider">
+              <svg>
+                <use xlink:href="img/design/sprite.svg#icon-arrow-left"></use>
+              </svg>
+            </button>
+            <button class="slider__next btn-slider">
+              <svg>
+                <use xlink:href="img/design/sprite.svg#icon-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!--include includes/_gallery-->
+      <section class="sponsors">
+        <h4 class="header-section header-section--alt">sponsors</h4>
+        <div style="text-align: center" class="sponsors__badges">
+          <div class="col-20">
+            <div class="label-sponsor">
+              <div class="label-sponsor__logo"><img src="img/content/sponsor-1.svg"></div>
+              <div class="label-sponsor__title">
+                <div class="label-sponsor__text"><strong>dinner</strong><span>sponsor</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-20">
+            <div class="label-sponsor">
+              <div class="label-sponsor__logo"><img src="img/content/sponsor-2.svg"></div>
+              <div class="label-sponsor__title">
+                <div class="label-sponsor__text"><strong>location</strong><span>sponsor</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-20">
+            <div class="label-sponsor">
+              <div class="label-sponsor__logo"><img src="img/content/sponsor-4.svg"></div>
+              <div class="label-sponsor__title">
+                <div class="label-sponsor__text"><strong>digital</strong><span>sponsor</span></div>
+              </div>
+            </div>
+          </div>
+          <button class="slider__prev-sm btn-slider-sm">
+            <svg>
+              <use xlink:href="img/design/sprite.svg#icon-arrow-left"></use>
+            </svg>
+          </button>
+          <button class="slider__next-sm btn-slider-sm">
+            <svg>
+              <use xlink:href="img/design/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="contact">
+        <div id="map"></div>
+        <div class="col-50 col-right-padded--alt col--faded">
+          <h4 class="header-section header-section--primary">contact</h4>
+          <h5 class="section__subject header-subject">London</h5>
+          <h6 class="section__caption header-caption">Business Conference</h6>
+          <p class="section__address label-caption">120 Main Street, Anytown, LN 12005</p>
+          <form class="contact__form">
+            <input placeholder="Name &amp; Surname" class="input">
+            <input placeholder="Email address" class="section__input input">
+            <textarea class="section__input input textarea">Message...</textarea>
+            <div class="contact__submit">
+              <button class="btn-send">send</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <footer class="footer">
+        <ul class="footer__nav list-h">
+          <li class="list-h__item"><a href="#" class="link-nav">home</a></li>
+          <li class="list-h__item"><a href="#" class="link-nav">about</a></li>
+          <li class="list-h__item"><a href="#" class="link-nav">speakers</a></li>
+          <li class="list-h__item"><a href="#" class="link-nav">program</a></li>
+          <li class="list-h__item"><a href="#" class="link-nav">blog</a></li>
+          <li class="list-h__item"><a href="#" class="link-nav">sponsor</a></li>
+          <li class="list-h__item"><a href="#" class="link-nav">contact</a></li>
+        </ul>
+        <h3 class="footer__logo logo logo--alt">evently</h3>
+        <ul class="footer__social list-h">
+          <li class="list-h__item--social-alt">
+            <button class="btn-social-alt">
+              <svg>
+                <use xlink:href="img/design/sprite.svg#icon-fb-l"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="list-h__item--social-alt">
+            <button class="btn-social-alt">
+              <svg>
+                <use xlink:href="img/design/sprite.svg#icon-twitter-l"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="list-h__item--social-alt">
+            <button class="btn-social-alt">
+              <svg>
+                <use xlink:href="img/design/sprite.svg#icon-gplus-l"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="list-h__item--social-alt">
+            <button class="btn-social-alt">
+              <svg>
+                <use xlink:href="img/design/sprite.svg#icon-linkedin-l"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <p class="footer__copyright label-copyright">All right reserved. Copyright &copy; 2016. <strong>Tosia Theme.</strong></p>
+      </footer>
     </div>
-    <button class="btn-slider btn-slider--prev"></button>
-    <button class="btn-slider btn-slider--next"></button>
-    <ul class="list-h">
-      <li class="list-h__item list-h__item--social">
-        <button class="btn-social btn-social--fb"></button>
-      </li>
-      <li class="list-h__item list-h__item--social">
-        <button class="btn-social btn-social--twitter"></button>
-      </li>
-      <li class="list-h__item list-h__item--social">
-        <button class="btn-social btn-social--gplus"></button>
-      </li>
-      <li class="list-h__item list-h__item--social">
-        <button class="btn-social btn-social--in"></button>
-      </li>
-    </ul>
-    <button class="btn-join">Join the <strong>Conference</strong></button>
-    <button class="btn-send">send</button>
-    <ul class="list-h">
-      <li class="list-h__item list-h__item--social-alt">
-        <button class="btn-social-alt btn-social-alt--fb"></button>
-      </li>
-      <li class="list-h__item list-h__item--social-alt">
-        <button class="btn-social-alt btn-social-alt--twitter"></button>
-      </li>
-      <li class="list-h__item list-h__item--social-alt">
-        <button class="btn-social-alt btn-social-alt--gplus"></button>
-      </li>
-      <li class="list-h__item list-h__item--social-alt">
-        <button class="btn-social-alt btn-social-alt--in"></button>
-      </li>
-    </ul>
-    <h1 class="header-section">about</h1>
-    <h1 class="header-section-alt">about</h1>
-    <h1 class="header-subject">kane w. doe</h1>
-    <h1 class="header-caption">business conference</h1>
-    <h1 class="header-caption-alt">digital designer</h1>
-    <p class="p-common">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu. <br>Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula. </p>
-    <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu. <br>Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula. </p>
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhrh9_CT0TAl3bMAuAkVLbqamu4ydXevI&amp;sensor=false&amp;extension=.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/custom-scrollbar.concat.min.js"></script>
+    <script src="js/speaker-slider.js"></script>
+    <script src="js/blog-slider.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/test.js"></script>
   </body>
 </html>

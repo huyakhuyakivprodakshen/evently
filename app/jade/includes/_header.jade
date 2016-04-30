@@ -1,0 +1,55 @@
+header.header
+  h3.header__logo.logo.logo--main
+    a(href="#") event
+      span
+        | ly
+  button#btn-burger.header__burger.btn-burger &#9776;
+  ul#header-nav.header__nav.list-h
+    li.list-h__item
+      a.link-nav(href="#") home
+    li.list-h__item
+      a.link-nav(href="#") about
+    li.list-h__item
+      a.link-nav(href="#") speakers
+    li.list-h__item
+      a.link-nav(href="#") program
+    li.list-h__item
+      a.link-nav(href="#") blog
+    li.list-h__item
+      a.link-nav(href="#") sponsor
+    li.list-h__item
+      a.link-nav(href="#") contact
+  time.header__promo-date.label-promo-date(datetime="2016-10-15/2016-10-21") 15-21 October
+  h1.header__promo-header.header-promo london
+  h2.header__promo-header.label-promo-caption business 
+    strong conference
+  .header__promo-button
+    button.btn-promo Join the 
+      strong Conference
+  ul.list-h.header__timer
+    li.list-h__item--timer
+      .label-timer-piece 
+        .label-timer-piece__text
+          strong#timer-day
+          span days
+    li.list-h__item--timer
+      .label-timer-piece 
+        .label-timer-piece__text
+          strong#timer-hour
+          span hours
+    li.list-h__item--timer
+      .label-timer-piece
+        .label-timer-piece__text
+          strong#timer-min
+          span min.
+    li.list-h__item--timer
+      .label-timer-piece 
+        .label-timer-piece__text
+          strong#timer-sec
+          span sec.
+  .header__btn-scroll
+    .btn-scroll 
+      button.btn-scroll__icon
+        svg
+          use(xlink:href="img/design/sprite.svg#icon-arrow-down")
+      span.btn-scroll__caption scroll down

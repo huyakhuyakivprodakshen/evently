@@ -1,0 +1,25 @@
+section.speakers
+  .col-50.col-left-padded
+    h4.header-section.header-section--secondary speakers
+    ul#slider-info.list-slider
+      li.list-slider__item
+        +speaker('Kane W. Doe', 'Digital Designer', 'kanew.doe', '@conference.co', 'Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.', 'Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.')
+      li.list-slider__item.hidden
+        +speaker('Emma Watson', 'Senior developer', 'emma.watson', '@conference.co', 'Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.', 'Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.')
+      li.list-slider__item.hidden
+        +speaker('Carl Johnson', 'Stock exchange trader', 'carl.johnson', '@conference.co', 'Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.', 'Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.')
+      li.list-slider__item.hidden
+        +speaker('Constantine Stromberg', 'CEO', 'c.stromberg', '@conference.co', 'Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.', 'Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.')
+  .col-50
+    #slider-speaker.img-wrapper
+      .overlay
+      img.image(src="img/content/speaker-1.jpg")
+      img.image(src="img/content/speaker-2.jpg")
+      img.image(src="img/content/speaker-3.jpg")
+      img.image(src="img/content/speaker-4.jpg")
+      button.slider__prev.btn-slider
+        svg
+          use(xlink:href="img/design/sprite.svg#icon-arrow-left")
+      button.slider__next.btn-slider
+        svg
+          use(xlink:href="img/design/sprite.svg#icon-arrow-right")

@@ -1,10 +1,44 @@
-mixin list-nav(...links)
-  ul.list-h
-    each link in links
-      li.list-h__item
-        a.link-nav(href="#"+link)= link
-mixin list-btn(liclass, btnclass, ...btns)
-  ul.list-h
-    each btn in btns
-      li(class='list-h__item '+liclass)
-        button(class=btnclass+btn)
+mixin plan(name, price, type, ...features)
+  div(class='plan plan--'+type)
+    .plan__content
+      strong(class="plan__name-"+type)= name 
+      strong(class="plan__price-"+type)= price
+        sup 
+          span .00
+          strong  $
+      each feature in features
+        p(class="plan__feature plan__feature--"+type)
+          svg
+            use(xlink:href="img/design/sprite.svg#icon-check")
+          span= feature
+          
+mixin social
+  ul.section__social.list-h
+    li.list-h__item--social
+      button.btn-social
+        svg
+          use(xlink:href="img/design/sprite.svg#icon-fb-s")
+    li.list-h__item--social
+      button.btn-social
+        svg
+          use(xlink:href="img/design/sprite.svg#icon-twitter-s")
+    li.list-h__item--social
+      button.btn-social
+        svg
+          use(xlink:href="img/design/sprite.svg#icon-gplus-s")
+    li.list-h__item
+      button.btn-social
+        svg
+          use(xlink:href="img/design/sprite.svg#icon-linkedin-s")
+          
+mixin speaker(name, role, ename, edomain, ...bio)
+  h5.section__subject.header-subject #{name}  
+  h6.section__caption.header-caption-alt #{role}
+  .section__text
+    each p in bio
+      p.p-common-alt= p
+  .section__contacts
+    a.link-email(href="mailto:#") 
+      strong #{ename}
+      | #{edomain}
+    +social

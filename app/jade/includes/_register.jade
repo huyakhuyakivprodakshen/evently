@@ -1,0 +1,43 @@
+section.register
+  h4.header-section.header-section--secondary register & pricing
+  .col-50.col-50--sm
+    h5.section__subject.header-subject Join conference
+    h6.section__caption.header-caption-alt London conference
+    .section__text--sm
+      p.p-common-alt Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.
+    .section__contacts
+      a.link-email(href="mailto:#") 
+        strong kanew.doe
+        | @conference.co
+      ul.section__social.list-h
+        li.list-h__item--social
+          button.btn-social
+            svg
+              use(xlink:href="img/design/sprite.svg#icon-fb-s")
+        li.list-h__item--social
+          button.btn-social
+            svg
+              use(xlink:href="img/design/sprite.svg#icon-twitter-s")
+        li.list-h__item--social
+          button.btn-social
+            svg
+              use(xlink:href="img/design/sprite.svg#icon-gplus-s")
+        li.list-h__item
+          button.btn-social
+            svg
+              use(xlink:href="img/design/sprite.svg#icon-linkedin-s")
+  .col-50.col-50--sm
+    form.register__form
+      input.input(placeholder="Name & Surname")
+      input.section__input.input(placeholder="Email Address")
+      input.section__input.input(placeholder="Phone Number")
+      .select-wrapper.section__input
+        select
+          option(disabled selected) Select your plan...
+          option $ 101 - Personal
+          option $ 114 - Business
+          option $ 120 - Company
+      button.section__input.btn-join Join the 
+        strong Conference
+        svg
+          use(xlink:href="img/design/sprite.svg#icon-arrow-right")

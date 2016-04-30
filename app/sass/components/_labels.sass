@@ -1,16 +1,163 @@
-.label-date-xl
+.label-promo-date
+  max-width: 480px
+  height: 74px
   display: block
   text-align: center
   font: 700 40px $font-family-robotoslab
-  +size(480px, 74px)
   line-height: 74px
   border-top: 1px solid $color-bg-alt
   border-bottom: 1px solid $color-bg-alt
-.label-date-m
-  display: block
+
+.label-promo-caption
+  text-transform: capitalize
+  font-weight: 300
+  font-size: 30px
   text-align: center
-  font: 700 40px $font-family-robotoslab
-  +size(480px, 74px)
-  line-height: 74px
+  strong
+    font-weight: 600
+    color: $color-text-decorate
+
+.label-caption
+  display: block
+  min-height: 64px
+  font: 700 24px $font-family-robotoslab
+  line-height: 64px
   border-top: 1px solid $color-bg-alt
   border-bottom: 1px solid $color-bg-alt
+  &--date
+    max-width: 470px
+
+.label-pin
+  background-color: $color-bg-primary
+  font-family: $font-family-robotoslab
+  padding: 25px 30px
+  display: inline-block
+  position: relative
+  &:before
+    +pseudo
+    left: -19px
+    top: 60%
+    border-style: solid
+    height: 0
+    width: 0
+    border-color: transparent
+    border-right-color: $color-bg-primary
+    border-width: 10px
+  span
+    line-height: 1.2
+    font-size: 18px
+    font-weight: 700
+  strong
+    display: block
+    text-transform: capitalize
+    font-size: 30px
+    font-weight: 700
+    color: $color-text-decorate
+
+.label-timer-piece
+  +size(140px, 150px)
+  +border(2, $color-bg-secondary)
+  text-align: center
+  position: relative
+  &__text
+    +c-align
+    position: absolute
+    strong
+      font: 700 48px/1 $font-family-robotoslab
+      display: block
+    span
+      font: 300 18px $font-family-robotoslab
+      text-transform: uppercase
+.label-sponsor
+  font-size: 0
+  height: 130px
+  &__logo
+    display: inline-block
+    +size(50%, 100%)
+    background-color: $color-bg-secondary
+    vertical-align: top
+    position: relative
+    img
+      position: absolute
+      +size(80%)
+      +c-align
+  &__title
+    text-transform: capitalize
+    +size(50%, 100%)
+    display: inline-block
+    padding: 50px 0
+    line-height: .75
+    box-sizing: border-box
+    background-color: $color-bg-decorate
+    font-size: 20px
+    position: relative
+  &__text
+    position: absolute
+    text-align: left
+    +h-align
+    strong
+      display: block
+      font-weight: 700
+.label-shedule-caption
+  display: table
+  span
+    vertical-align: top
+    display: table-cell
+    padding-top: 40px
+    font-size: 36px
+    text-transform: capitalize
+  strong
+    letter-spacing: -2px
+    font-size: 120px
+    font-weight: 900
+    text-transform: uppercase
+    display: table-cell
+    line-height: .7
+    em
+      line-height: 1
+      font-style: normal
+      font-size: 80px
+.label-shedule-item
+  height: 90px
+  width: 90%
+  box-sizing: border-box
+  border-top: 1px solid $color-bg-alt
+  padding-top: 15px
+  time
+    display: block
+    font: 700 24px $font-family-robotoslab
+  span
+    font-size: 16px
+.label-image-overlay
+  opacity: 0
+  transition: opacity .25s ease-in-out
+  +size(100%)
+  box-sizing: border-box
+  z-index: 1
+  position: absolute
+  +border(10, transparent)
+  &__inner
+    background-color: transparentize($color-bg-decorate, .3)
+    +size(100%)
+    +border(20, transparent)
+    box-sizing: border-box
+  &__caption
+    position: relative
+    +size(100%)
+    +border(2, $color-bg-secondary)
+    box-sizing: border-box
+    text-align: center
+    font-family: $font-family-robotoslab
+    font-weight: 700
+
+    strong
+      font-size: 30px
+    p
+      margin-top: 20px
+      font-size: 16px
+      line-height: 1.1
+  &:hover
+    opacity: 1
+.label-copyright
+  font-size: 16px
+  color: $color-text-secondary

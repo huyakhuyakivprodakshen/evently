@@ -1,109 +1,123 @@
 .btn-promo
-  @extend %_btn-solid
   +size(320px, 70px)
+  border: none
   color: $color-text-primary
-  font: 600 24px $font-family-raleway
+  font-size: 24px
+  font-weight: 600
   background-color: $color-bg-decorate
   position: relative
   &:active
     top: 2px
   strong
     font-weight: 800
+.btn-burger
+  +size(76px)
+  text-align: center
+  +border(3, $color-bg-secondary)
+  background: none
+  font-size: 40px
+  color: $color-text-primary
 
 .btn-scroll
   display: inline-block
   text-align: center
   &__icon
-    @extend %_btn-icon
     +size(36px, 46px)
     +border(2, $color-bg-decorate)
+    background-color: transparent
     margin-bottom: 15px
     position: relative
-    &:after
-      @extend %_bg-sprite
-      +size(10px, 17px)
-      +c-align
-      +pseudo
-      background-position: -57px -5px
+    animation: bounce 1.5s infinite ease-in-out
+    &:hover
+      animation: none
+    svg
+      +size(16px, 24px)
+      fill: $color-bg-decorate
   &__caption
     display: block
     text-transform: uppercase
     color: $color-text-decorate
-    font: 14px $font-family-raleway
+    font-size: 14px
 
 .btn-slider
-  @extend %_btn-icon
   +border(2, $color-bg-decorate)
   +size(63px)
-  position: relative
-  &--prev:after, &--next:after
-    @extend %_bg-sprite
-    +size(25px, 16px)
-    +c-align
-    +pseudo
-  &--prev:after
-    background-position: -77px -31px
-  &--next:after
-    background-position: -77px -5px
+  background-color: transparent
+  svg
+    +size(35px, 26px)
+    fill: $color-bg-decorate
+.btn-slider-sm
+  border: none
+  +size(25px)
+  background-color: transparent
+  svg
+    +size(25px)
+    fill: $color-bg-decorate
 
 .btn-social
-  @extend %_btn-icon-solid
-  @extend %_bg-sprite
   +size(32px)
-  &--fb
-    background-position: -5px -57px
-  &--twitter
-    background-position: -5px -99px
-  &--gplus
-    background-position: -65px -57px
-  &--in
-    background-position: -107px -57px
-
+  background-color: transparent
+  border: none
+  svg
+    +size(32px)
+    fill: $color-text-secondary
+  &:hover
+    svg
+      fill: $color-text-alt
 .btn-social-alt
-  @extend %_btn-icon
   +size(38px)
   +border(2, $color-bg-secondary)
   position: relative
-  &--fb:after, &--twitter:after, &--gplus:after, &--in:after
-    @extend %_bg-sprite
-    +size(16px)
-    +c-align
-    +pseudo
-  &--fb:after
-    background-position: -43px -57px
-  &--twitter:after
-    background-position: -47px -99px
-  &--gplus:after
-    background-position: -112px -5px
-  &--in:after
-    background-position: -112px -31px
-
+  background-color: transparent
+  svg
+    +size(20px)
+    fill: $color-text-primary
+  &:hover
+    svg
+      fill: $color-text-decorate
 .btn-join
-  @extend %_btn-solid
   +size(100%, 65px)
+  border: none
   background-color: $color-bg-decorate
-  font: 600 24px $font-family-raleway
+  font-weight: 600
+  font-size: 24px
   color: $color-text-primary
   text-align: left
   padding-left: 30px
   position: relative
-  &:after
-    @extend %_bg-sprite
-    +size(25px, 16px)
-    +pseudo
-    background-position: -5px -31px
-    +v-align
+  svg
+    +size(35px, 26px)
+    position: absolute
     right: 30px
+    fill: $color-bg-secondary
   strong
     font-weight: 800
 
 .btn-send
-  @extend %_btn-solid
+  +size(100%, 240px)
+  border: none
   color: $color-text-decorate
   background-color: $color-bg-secondary
   text-transform: uppercase
   text-align: center
-  font: 700 18px $font-family-raleway
+  font-weight: 700
+  font-size: 18px
   position: relative
   &:active
     top: 2px
+.button-page
+  font: 700 18px $font-family-robotoslab
+  background: none
+  border: none
+  color: $color-bg-alt
+  border-bottom: 2px solid
+  padding-right: 30px
+  line-height: .75
+.button-page--active
+  font: 700 30px $font-family-robotoslab
+  padding-right: 30px
+  background: none
+  line-height: .75
+  border: none
+  color: $color-text-decorate
+  border-bottom: 6px solid

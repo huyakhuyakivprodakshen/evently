@@ -1,7 +1,24 @@
 .link-nav
   text-transform: uppercase
   transition: color .25s ease-in
-  font: 14px $font-family-raleway
+  font-size: 14px
   padding: 0 20px
   &:hover
     color: $color-text-decorate
+
+.link-email
+  font-size: 20px
+  color: $color-text-secondary
+  strong
+    color: $color-text-decorate
+    font-weight: 700
+
+.link-readmore
+  color: $color-text-secondary
+  font-size: 16px
+  font-weight: 700
+  position: relative
+  &:after
+    font-size: inherit
+    position: absolute
+    content: "\00a0..."
