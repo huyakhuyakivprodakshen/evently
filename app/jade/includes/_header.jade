@@ -4,21 +4,7 @@ header.header
       span
         | ly
   button#btn-burger.header__burger.btn-burger &#9776;
-  ul#header-nav.header__nav.list-h
-    li.list-h__item
-      a.link-nav(href="#") home
-    li.list-h__item
-      a.link-nav(href="#") about
-    li.list-h__item
-      a.link-nav(href="#") speakers
-    li.list-h__item
-      a.link-nav(href="#") program
-    li.list-h__item
-      a.link-nav(href="#") blog
-    li.list-h__item
-      a.link-nav(href="#") sponsor
-    li.list-h__item
-      a.link-nav(href="#") contact
+  +mainnav('header__nav', 'header-nav')
   time.header__promo-date.label-promo-date(datetime="2016-10-15/2016-10-21") 15-21 October
   h1.header__promo-header.header-promo london
   h2.header__promo-header.label-promo-caption business 

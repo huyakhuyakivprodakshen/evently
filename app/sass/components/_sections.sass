@@ -3,7 +3,7 @@
   min-width: 320px
   margin: 0 auto
 .top-wrapper
-  background: url(../img/design/header-bg.jpg) no-repeat
+  background: url(../img/design/header-bg-xl.jpg) no-repeat
   background-size: cover
 .col-50
   display: inline-block
@@ -64,7 +64,6 @@
 .header
   height: 1112px
   position: relative
-  padding-bottom: 80px
   box-sizing: border-box
   border-top: 1px solid transparent
   &__logo
@@ -116,12 +115,14 @@
   &__form
     margin-top: 60px
 .plans
-  background: url(../img/design/plans-bg-3.jpg) no-repeat fixed
+  background: url(../img/design/plans-bg.jpg) no-repeat
   background-size: cover
   padding: 50px 8%
 .faq
   font-size: 0
   min-height: 700px
+  &__accordeon
+    margin-top: 20px
 .blog
   font-size: 0
   background-color: $color-bg-secondary
@@ -153,8 +154,11 @@
 .sponsors
   padding: 0 8%
   &__badges
+    overflow: hidden
+    text-align: center
     position: relative
     font-size: 0
+    height: 130px
     padding: 50px 0
 .contact
   font-size: 0
@@ -201,7 +205,6 @@
   background-image: url(../img/design/01.png)
 .image
   z-index: 0
-  //opacity: .6
   display: block
   position: absolute
   left: -9999px
@@ -223,6 +226,8 @@
     position: absolute
     +v-align
     left: 20px
+    &:hover, &:active
+      left: 16px
   &__next
     z-index: 99
     position: absolute
@@ -234,6 +239,8 @@
     position: absolute
     +v-align
     right: 20px
+    &:hover, &:active
+      right: 16px
 #map
   box-sizing: border-box
   position: absolute
@@ -249,3 +256,7 @@
   padding: 0
 .gm-style-iw a
   color: #4272db
+.gm-style-cc, .gmnoprint
+  display: none
+#slider-sponsors
+  position: relative

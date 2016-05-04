@@ -88,7 +88,7 @@ button {
 
 .hidden {
   opacity: 0;
-  transform: perspective(400px) rotate3d(1, 0, 0, 90deg); }
+  transform: scale3d(0.3, 0.3, 0.3); }
 
 .animated {
   animation-duration: .8s;
@@ -158,13 +158,131 @@ button {
   animation-name: flipOutX;
   backface-visibility: visible !important; }
 
+@keyframes lightSpeedIn {
+  from {
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0; }
+  60% {
+    transform: skewX(20deg);
+    opacity: 1; }
+  80% {
+    transform: skewX(-5deg);
+    opacity: 1; }
+  to {
+    transform: none;
+    opacity: 1; } }
+
+.lightSpeedIn {
+  animation-name: lightSpeedIn;
+  animation-timing-function: ease-out; }
+
+@keyframes lightSpeedOut {
+  from {
+    opacity: 1; }
+  to {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0; } }
+
+.lightSpeedOut {
+  animation-name: lightSpeedOut;
+  animation-timing-function: ease-in; }
+
+@keyframes flip {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    animation-timing-function: ease-out; }
+  40% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out; }
+  50% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in; }
+  80% {
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95);
+    animation-timing-function: ease-in; }
+  to {
+    transform: perspective(400px);
+    animation-timing-function: ease-in; } }
+
+.animated.flip {
+  backface-visibility: visible;
+  animation-name: flip; }
+
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0; }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in; }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1; }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+  to {
+    transform: perspective(400px); } }
+
+.flipInX {
+  backface-visibility: visible !important;
+  animation-name: flipInX; }
+
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0; }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in; }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1; }
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg); }
+  to {
+    transform: perspective(400px); } }
+
+.flipInY {
+  backface-visibility: visible !important;
+  animation-name: flipInY; }
+
+@keyframes flipOutX {
+  from {
+    transform: perspective(400px); }
+  30% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1; }
+  to {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0; } }
+
+.flipOutX {
+  animation-name: flipOutX;
+  backface-visibility: visible !important; }
+
+@keyframes flipOutY {
+  from {
+    transform: perspective(400px); }
+  30% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1; }
+  to {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0; } }
+
+.flipOutY {
+  backface-visibility: visible !important;
+  animation-name: flipOutY; }
+
 .page {
   max-width: 1920px;
   min-width: 320px;
   margin: 0 auto; }
 
 .top-wrapper {
-  background: url(../img/design/header-bg.jpg) no-repeat;
+  background: url(../img/design/header-bg-xl.jpg) no-repeat;
   background-size: cover; }
 
 .col-50 {
@@ -243,7 +361,6 @@ button {
 .header {
   height: 1112px;
   position: relative;
-  padding-bottom: 80px;
   box-sizing: border-box;
   border-top: 1px solid transparent; }
   .header__logo {
@@ -302,13 +419,15 @@ button {
     margin-top: 60px; }
 
 .plans {
-  background: url(../img/design/plans-bg-3.jpg) no-repeat fixed;
+  background: url(../img/design/plans-bg.jpg) no-repeat;
   background-size: cover;
   padding: 50px 8%; }
 
 .faq {
   font-size: 0;
   min-height: 700px; }
+  .faq__accordeon {
+    margin-top: 20px; }
 
 .blog {
   font-size: 0;
@@ -344,8 +463,11 @@ button {
 .sponsors {
   padding: 0 8%; }
   .sponsors__badges {
+    overflow: hidden;
+    text-align: center;
     position: relative;
     font-size: 0;
+    height: 130px;
     padding: 50px 0; }
 
 .contact {
@@ -424,6 +546,8 @@ button {
   top: 50%;
   transform: translateY(-50%);
   left: 20px; }
+  .slider__prev-sm:hover, .slider__prev-sm:active {
+    left: 16px; }
 
 .slider__next {
   z-index: 99;
@@ -439,6 +563,8 @@ button {
   top: 50%;
   transform: translateY(-50%);
   right: 20px; }
+  .slider__next-sm:hover, .slider__next-sm:active {
+    right: 16px; }
 
 #map {
   box-sizing: border-box;
@@ -458,6 +584,12 @@ button {
 
 .gm-style-iw a {
   color: #4272db; }
+
+.gm-style-cc, .gmnoprint {
+  display: none; }
+
+#slider-sponsors {
+  position: relative; }
 
 .logo {
   width: 150px;
@@ -592,8 +724,59 @@ button {
 
 .list-slider {
   position: relative; }
+  .list-slider--shedule {
+    height: 440px; }
   .list-slider__item {
+    width: 100%;
     position: absolute; }
+
+.list-accordeon {
+  overflow-y: auto;
+  max-height: 360px;
+  perspective: 900; }
+  .list-accordeon__item {
+    position: relative;
+    padding: 25px;
+    box-sizing: border-box;
+    width: 90%;
+    margin-bottom: 10px;
+    border: 2px solid #fff; }
+    .list-accordeon__item--active {
+      border: 2px solid #e5c665; }
+  .list-accordeon__btn {
+    float: right;
+    transition: all .25s ease;
+    transform: scaleY(-1); }
+  .list-accordeon strong {
+    font-size: 24px;
+    font-family: "Robotoslab", Georgia, serif;
+    font-weight: 700; }
+  .list-accordeon input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    z-index: 1;
+    opacity: 0; }
+    .list-accordeon input[type="checkbox"]:checked ~ p {
+      margin-top: 0;
+      max-height: 0;
+      opacity: 0;
+      transform: translate(0, 50%); }
+    .list-accordeon input[type="checkbox"]:checked ~ button {
+      transform: scaleY(1); }
+  .list-accordeon p {
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    max-height: 800px;
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all .25s ease;
+    z-index: 2; }
 
 .row {
   width: 100%;
@@ -703,7 +886,8 @@ button {
   border: none;
   width: 25px;
   height: 25px;
-  background-color: transparent; }
+  background-color: transparent;
+  border: 1px solid red; }
   .btn-slider-sm svg {
     width: 25px;
     height: 25px;
@@ -786,6 +970,14 @@ button {
   color: #e5c665;
   border-bottom: 6px solid; }
 
+.btn-accordeon {
+  border: none;
+  background: none; }
+  .btn-accordeon svg {
+    width: 16px;
+    height: 14px;
+    fill: #fff; }
+
 .p-common {
   width: 84%;
   text-align: justify;
@@ -799,6 +991,12 @@ button {
   line-height: 1.1;
   font-size: 16px;
   color: #6e6e6e; }
+
+.p-answer {
+  text-align: justify;
+  line-height: 1.1;
+  font-size: 16px;
+  color: #fff; }
 
 .label-promo-date {
   max-width: 480px;
@@ -1011,9 +1209,6 @@ button {
     padding-left: 30px;
     color: #6e6e6e; }
 
-.ahaha {
-  display: block; }
-
 .plan {
   min-height: 370px;
   height: 100%;
@@ -1072,12 +1267,6 @@ button {
     .plan__feature span {
       display: block;
       padding-left: 30px; }
-
-@media (max-width: 320px) {
-  .header__logo {
-    margin: 10px 0 0 10px; }
-  .section__text {
-    height: 300px; } }
 
 @media (max-width: 1024px) {
   .section__header--alt {
@@ -1146,12 +1335,31 @@ button {
     height: 100%; }
   .slider__prev-sm {
     left: -10px; }
+    .slider__prev-sm:hover, .slider__prev-sm:active {
+      left: -14px; }
   .slider__next-sm {
     right: -10px; }
+    .slider__next-sm:hover, .slider__next-sm:active {
+      right: -14px; }
   .footer__nav {
     display: none; } }
 
 @media (max-width: 640px) {
+  .top-wrapper {
+    background: none; }
+  .header {
+    background-image: url(../img/design/header-bg.jpg);
+    height: 1024px; }
+  .sponsors__badges {
+    height: 450px; }
+  .sponsors {
+    padding: 0 4%; }
+  .plans {
+    background-image: url(../img/design/plans-bg-m.jpg); }
+  .list-accordeon__item {
+    padding: 15px; }
+  .list-accordeon__btn {
+    right: 15px; }
   .section__header--alt {
     margin-top: 0; }
   .header__logo {
@@ -1213,4 +1421,42 @@ button {
     font-size: 36px; }
   .label-shedule-caption strong {
     font-size: 120px;
-    display: block; } }
+    display: block; }
+  .slider__prev-sm {
+    left: 0; }
+    .slider__prev-sm:hover, .slider__prev-sm:active {
+      left: -4px; }
+  .slider__next-sm {
+    right: 0; }
+    .slider__next-sm:hover, .slider__next-sm:active {
+      right: -4px; } }
+
+@media (max-width: 320px) {
+  .header__logo {
+    margin: 10px 0 0 10px; }
+  .section__text {
+    height: 300px; }
+  .header {
+    background-image: url(../img/design/header-bg-sm.jpg); }
+  .btn-promo {
+    width: 300px; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .top-wrapper {
+    background-image: url(../img/design/header-bg-xl@2x.jpg); }
+  .plans {
+    background-image: url(../img/design/plans-bg@2x.jpg); } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (max-width: 640px) {
+  .top-wrapper {
+    background-image: none; }
+  .header {
+    background-image: url(../img/design/header-bg@2x.jpg);
+    background-size: cover; }
+  .plans {
+    background-image: url(../img/design/plans-bg-m@2x.jpg); } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (max-width: 320px) {
+  .header {
+    background-image: url(../img/design/header-bg-sm@2x.jpg);
+    background-size: cover; } }

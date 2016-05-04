@@ -8,7 +8,6 @@
   var currentSlide = 0;
   var nextSlide = 1;
   $(slides[currentSlide]).css('z-index','2');
-  console.log(cards);
   btnPrev.click(function(){
     $(slides[currentSlide]).css('z-index','2');
     $(slides[prevSlide]).css('z-index','1');

@@ -1,8 +1,15 @@
 section.faq
   .col-50
     .img-wrapper
-      img.image(src="img/design/faq-bg.jpg" width="960" height="700")
+      img.image(src="img/design/faq-bg.jpg" srcset="img/design/faq-bg.jpg 1x, img/design/faq-bg@2x.jpg 2x")
   .col-50.col-right-padded--alt
     h4.header-section.header-section--primary FAQ
     h5.section__subject.header-subject Event FAQ
     h6.section__caption.header-caption Find your answers
+    ul.faq__accordeon.list-accordeon
+      +question('How to make new event?','Vestibulum sit amet tincidunt urna, eget ullamcorper purus. Aenean feugiat quis tortor vitae fringilla. Pellentesque augue nisl, condimentum at sem et, fermentum varius ligula. Nulla dignissim nulla eget congue cursus.')
+      +question('How to set price?','Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit.')
+      +question('How to change event data?','Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.')
+      +question('How to skip custom part?','Etiam sit amet arcu et lacus tincidunt elementum. Vestibulum molestie vestibulum. Morbi eget arcu a massa ultricies egestas. Suspendisse ut lobortis nisl. Mauris non porttitor mi.')
+      +question('How to upgrade your plan?','Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu. Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.')
+      +question('How to make $1 billion playing minecraft','Pellentesque augue nisl, condimentum at sem et, fermentum varius ligula. Vestibulum sit amet tincidunt urna, eget ullamcorper purus. Aenean feugiat quis tortor vitae fringilla.')

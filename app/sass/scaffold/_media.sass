@@ -1,8 +1,3 @@
-@media (max-width: 320px)
-  .header__logo
-    margin: 10px 0 0 10px
-  .section__text
-    height: 300px
 @media (max-width: 1024px)
   .section__header--alt
     margin-top: 50px
@@ -69,11 +64,30 @@
     +size(30%, 100%)
   .slider__prev-sm
     left: -10px
+    &:hover, &:active
+      left: -14px
   .slider__next-sm
     right: -10px
+    &:hover, &:active
+      right: -14px
   .footer__nav
     display: none
 @media (max-width: 640px)
+  .top-wrapper
+    background: none
+  .header
+    background-image: url(../img/design/header-bg.jpg)
+    height: 1024px
+  .sponsors__badges
+    height: 450px
+  .sponsors
+    padding: 0 4%
+  .plans
+    background-image: url(../img/design/plans-bg-m.jpg)
+  .list-accordeon__item
+    padding: 15px
+  .list-accordeon__btn
+    right: 15px
   .section__header--alt
     margin-top: 0
   .header__logo
@@ -136,3 +150,37 @@
     strong
       font-size: 120px
       display: block
+  .slider__prev-sm
+    left: 0
+    &:hover, &:active
+      left: -4px
+  .slider__next-sm
+    right: 0
+    &:hover, &:active
+      right: -4px
+@media (max-width: 320px)
+  .header__logo
+    margin: 10px 0 0 10px
+  .section__text
+    height: 300px
+  .header
+    background-image: url(../img/design/header-bg-sm.jpg)
+  .btn-promo
+    width: 300px
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+  .top-wrapper
+    background-image: url(../img/design/header-bg-xl@2x.jpg)
+  .plans
+    background-image: url(../img/design/plans-bg@2x.jpg)
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (max-width: 640px)
+  .top-wrapper
+    background-image: none
+  .header
+    background-image: url(../img/design/header-bg@2x.jpg)
+    background-size: cover
+  .plans
+    background-image: url(../img/design/plans-bg-m@2x.jpg)
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) and (max-width: 320px)
+  .header
+    background-image: url(../img/design/header-bg-sm@2x.jpg)
+    background-size: cover

@@ -1,3 +1,37 @@
+mixin question(q, a)
+  li.list-accordeon__item
+    input(type="checkbox" checked)
+    button.list-accordeon__btn.btn-accordeon
+      svg
+        use(xlink:href="img/design/sprite.svg#icon-arrow-down-s")
+    strong #{q}
+    p.p-answer #{a}
+mixin post(subject, author, date, ...text)
+  h5.section__subject.header-subject #{subject}
+  h6.section__caption.header-caption-alt #{author}
+  .section__text
+    each p in text
+      p.p-common-alt= p
+  .section__contacts
+    a.link-email(href="#") 
+      strong #{date}
+    +social
+mixin mainnav(navclass, navid)
+  ul(id=navid class='list-h '+navclass)
+    li.list-h__item
+      a.link-nav(href="index.html") home
+    li.list-h__item
+      a.link-nav(href="#about"  onclick="smoothScroll('about')") about
+    li.list-h__item
+      a.link-nav(href="#speakers" onclick="smoothScroll('speakers')") speakers
+    li.list-h__item
+      a.link-nav(href="#shedule" onclick="smoothScroll('shedule')") program
+    li.list-h__item
+      a.link-nav(href="#blog" onclick="smoothScroll('blog')") blog
+    li.list-h__item
+      a.link-nav(href="#sponsors" onclick="smoothScroll('sponsors')") sponsor
+    li.list-h__item
+      a.link-nav(href="#contact" onclick="smoothScroll('contact')") contact
 mixin plan(name, price, type, ...features)
   div(class='plan plan--'+type)
     .plan__content

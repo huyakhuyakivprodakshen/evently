@@ -1,8 +1,11 @@
+
     google.maps.event.addDomListener(window, 'load', init);
     var map;
+    var winWidth = $(window).width();
+    var center = (winWidth>640) ? -0.115684 + winWidth/4*0.0001715 : -0.115684;
     function init() {
         var mapOptions = {
-            center: new google.maps.LatLng(51.508200,-0.017218),
+            center: new google.maps.LatLng(51.515000, center),
             zoom: 13,
             zoomControl: true,
             zoomControlOptions: {
@@ -142,7 +145,7 @@
         var mapElement = document.getElementById('map');
         var map = new google.maps.Map(mapElement, mapOptions);
         var locations = [
-['Business Hall', 'undefined', 'undefined', 'undefined', 'undefined', 51.50655217965765, -0.11615471302798142, 'img/design/pin.png']
+['Business Hall', 'undefined', 'undefined', 'undefined', 'undefined', 51.507252, -0.115684, 'img/design/pin.png']
         ];
         for (i = 0; i < locations.length; i++) {
 			if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
