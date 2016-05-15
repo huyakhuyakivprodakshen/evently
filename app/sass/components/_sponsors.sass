@@ -1,0 +1,25 @@
+.label-sponsor
+  font-size: 0
+  height: 130px
+  &__logo
+    display: inline-block
+    +size(50%, 100%)
+    background-color: $color-bg-secondary
+    position: relative
+    img
+      +size(80%)
+      +center
+  &__title
+    text-transform: capitalize
+    +size(50%, 100%)
+    display: inline-block
+    line-height: .75
+    background-color: $color-bg-decorate
+    font-size: 20px
+    position: relative
+  &__text
+    text-align: left
+    +center
+    strong
+      display: block
+      font-weight: 700

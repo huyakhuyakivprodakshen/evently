@@ -6,7 +6,7 @@
   &:hover
     color: $color-text-decorate
 
-.link-email
+.link-common
   font-size: 20px
   color: $color-text-secondary
   strong
@@ -14,10 +14,15 @@
     font-weight: 700
 
 .link-readmore
+  display: block
+  cursor: pointer
   color: $color-text-secondary
   font-size: 16px
+  transition: color .25s ease-out
   font-weight: 700
   position: relative
+  &:hover
+    color: $color-text-decorate
   &:after
     font-size: inherit
     position: absolute

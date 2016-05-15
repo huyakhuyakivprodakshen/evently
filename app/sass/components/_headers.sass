@@ -4,43 +4,50 @@
   text-transform: uppercase
   color: $color-text-decorate
   text-align: center
+
+.header-promo-caption
+  text-transform: capitalize
+  font-weight: 300
+  font-size: 30px
+  text-align: center
+  strong
+    font-weight: 600
+    color: $color-text-decorate
 .header-section
   +size(100%, 120px)
   text-transform: capitalize
   font-weight: 800
   font-size: 40px
   line-height: 120px
-.header-section--primary
-  box-sizing: border-box
-  background-color: $color-bg-decorate
-  position: relative
-  z-index: 0
-  &:before
-    +pseudo
-    width: 120px
-    height: 120px
-    left: -119px
-    z-index: -1
+  &--primary
     background-color: $color-bg-decorate
-
-.header-section--secondary
-  color: $color-text-alt
-  border-bottom: 1px solid $color-bg-decorate
-  position: relative
-  &:before
-    +pseudo
-    +size(12px, 1px)
-    background-color: $color-bg-secondary
-    bottom: -1px
-    left: 0
-  &:after
-    +pseudo
-    +size(7px)
-    background-color: $color-bg-decorate
-    border-radius: 50%
-    bottom: -4px
-    left: 0
+    position: relative
+    &:before
+      +pseudo
+      width: 120px
+      height: 120px
+      left: -120px
+      background-color: $color-bg-decorate
+  &--secondary
+    box-sizing: border-box
+    color: $color-text-alt
+    border-bottom: 1px solid $color-bg-decorate
+    position: relative
+    &:before
+      +pseudo
+      +size(12px, 1px)
+      background-color: $color-bg-secondary
+      bottom: -1px
+      left: 0
+    &:after
+      +pseudo
+      +size(7px)
+      background-color: $color-bg-decorate
+      border-radius: 50%
+      bottom: -4px
+      left: 0
 .header-section--alt
+  box-sizing: border-box
   border-bottom: 1px solid $color-bg-secondary
   position: relative
   &:before

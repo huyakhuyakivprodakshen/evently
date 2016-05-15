@@ -1,5 +1,5 @@
-section#speakers.speakers
-  .col-50.col-left-padded
+section#speakers.section.speakers
+  .col-50.col--left
     h4.header-section.header-section--secondary speakers
     ul#slider-info.list-slider
       li.list-slider__item
@@ -10,16 +10,14 @@ section#speakers.speakers
         +speaker('Carl Johnson', 'Stock exchange trader', 'carl.johnson', '@conference.co', 'Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.', 'Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.')
       li.list-slider__item.hidden
         +speaker('Constantine Stromberg', 'CEO', 'c.stromberg', '@conference.co', 'Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.', 'Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.')
-  .col-50
-    #slider-speaker.img-wrapper
-      .overlay
-      img.image(src="img/content/speaker-1.jpg" srcset="img/content/speaker-1.jpg 1x, img/content/speaker-1@2x.jpg 2x")
-      img.image(src="img/content/speaker-2.jpg" srcset="img/content/speaker-2.jpg 1x, img/content/speaker-2@2x.jpg 2x")
-      img.image(src="img/content/speaker-3.jpg" srcset="img/content/speaker-3.jpg 1x, img/content/speaker-3@2x.jpg 2x")
-      img.image(src="img/content/speaker-4.jpg" srcset="img/content/speaker-4.jpg 1x, img/content/speaker-4@2x.jpg 2x")
-      button.slider__prev.btn-slider
-        svg
-          use(xlink:href="img/design/sprite.svg#icon-arrow-left")
-      button.slider__next.btn-slider
-        svg
-          use(xlink:href="img/design/sprite.svg#icon-arrow-right")
+  #slider-speaker.col-50.img-wrapper
+    img.img(src="img/content/speaker-1.jpg" srcset="img/content/speaker-1.jpg 1x, img/content/speaker-1@2x.jpg 2x")
+    img.img(src="img/content/speaker-2.jpg" srcset="img/content/speaker-2.jpg 1x, img/content/speaker-2@2x.jpg 2x")
+    img.img(src="img/content/speaker-3.jpg" srcset="img/content/speaker-3.jpg 1x, img/content/speaker-3@2x.jpg 2x")
+    img.img(src="img/content/speaker-4.jpg" srcset="img/content/speaker-4.jpg 1x, img/content/speaker-4@2x.jpg 2x")
+    button.section__slider-prev.btn-slider
+      svg
+        use(xlink:href="img/design/sprite.svg#icon-arrow-left")
+    button.section__slider-next.btn-slider
+      svg
+        use(xlink:href="img/design/sprite.svg#icon-arrow-right")

@@ -36,4 +36,4 @@
 
   initializeClock(deadline);
 
-})()
+})();

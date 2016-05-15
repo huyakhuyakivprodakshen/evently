@@ -1,117 +1,122 @@
 .page
-  max-width: 1920px
-  min-width: 320px
+  max-width: $width-page-max
+  min-width: $width-page-min
   margin: 0 auto
 .top-wrapper
   background: url(../img/design/header-bg-xl.jpg) no-repeat
   background-size: cover
-.col-50
-  display: inline-block
-  +size(50%, 700px)
-  box-sizing: border-box
-  position: relative
-  vertical-align: top
-.col-20
-  padding: 0 5%
-  display: inline-block
-  +size(20%, 100%)
-  vertical-align: top
-
-.col-50--sm
-  height: 495px
-.col-right-padded
-  padding-right: 8%
-.col-right-padded--alt
-  padding-left: 3%
-  padding-right: 8%
-.col-left-padded
-  padding-left: 8%
-.col--faded
-  background-color: transparentize($color-bg-primary, .15)
-  position: absolute
-  right: 0
 .section
+  font-size: 0
+  min-height: 700px
+  &__header--gallery
+    padding-left: 3.6%
+    z-index: 1
+    box-sizing: border-box
+    width: 50%
+    float: right
   &__header--alt
     margin-top: 65px
   &__text
-    box-sizing: border-box
     overflow-y: auto
-    height: 250px
     margin-top: 30px
-    &--sm
+    & p:not(:first-child), a.link-readmore
       margin-top: 30px
-      box-sizing: border-box
-      overflow-y: auto
-      height: 210px
-    & p:not(:first-child)
-      margin-top: 30px
+    &--l
+      height: 250px
+    &--s
+      height: 200px
   &__subject
     margin-top: 50px
   &__caption
     margin-top: 5px
   &__date, &__address, &__social
     margin-top: 20px
-  &__contacts, &__input
+  &__contacts
     margin-top: 10px
-  &__shedule
-    margin-top: 25px
-  &__pager
-    margin-top: 60px
-  &__pin
-    position: absolute
-    +c-align
+  &__slider
+    &-prev
+      z-index: 99
+      +center('v')
+      left: 40px
+      transition: left .25s ease-out
+      &:hover, &:active
+        left: 35px
+    &-prev-s
+      +center('v')
+      left: 20px
+      transition: left .25s ease-out
+      &:hover, &:active
+        left: 15px
+    &-next
+      z-index: 99
+      +center('v')
+      right: 40px
+      transition: right .25s ease-out
+      &:hover, &:active
+        right: 35px
+    &-next-s
+      +center('v')
+      right: 20px
+      transition: right .25s ease-out
+      &:hover, &:active
+        right: 15px
+
+.speakers, .register, .blog
+  background-color: $color-bg-secondary
+.register, .gallery, .sponsors, .footer
+  padding: 0 8%
+.header, .gallery, .contact, .footer
+  position: relative
 
 .header
-  height: 1112px
-  position: relative
-  box-sizing: border-box
+  min-height: 1111px
   border-top: 1px solid transparent
-  &__logo
+  &__logo, &__promo-date
     margin: 50px auto 0 auto
   &__burger
     position: absolute
     right: 10px
     top: 10px
     display: none
-  &__nav
+  &__nav, &__promo-button
     margin-top: 50px
     text-align: center
-  &__promo-date
-    margin: 50px auto 0 auto
   &__promo-header
     margin-top: 5px
-  &__promo-button
-    margin-top: 50px
-    text-align: center
   &__timer
     margin-top: 90px
     text-align: center
   &__btn-scroll
-    position: absolute
     margin-top: 30px
-    +h-align
-.about
-  font-size: 0
-  min-height: 700px
-.speakers
-  background-color: $color-bg-secondary
-  font-size: 0
-  min-height: 700px
+    +center('h')
 .shedule
-  font-size: 0
-  min-height: 700px
   &__caption
-    position: absolute
-    +c-align
-    z-index: 1
+    +center
     margin-top: 60px
-
+    display: table
+    span
+      vertical-align: top
+      display: table-cell
+      padding-top: 40px
+      font-size: 36px
+      text-transform: capitalize
+    strong
+      letter-spacing: -2px
+      font-size: 120px
+      font-weight: 900
+      text-transform: uppercase
+      display: table-cell
+      line-height: .7
+      em
+        line-height: 1
+        font-style: normal
+        font-size: 80px
+  &__shedule
+    margin-top: 25px
+  &__pager
+    margin-top: 60px
 .register
   font-size: 0
-  background-color: $color-bg-secondary
-  min-height: 615px
-  padding: 0 8%
-  box-sizing: border-box
   &__form
     margin-top: 60px
 .plans
@@ -119,40 +124,24 @@
   background-size: cover
   padding: 50px 8%
 .faq
-  font-size: 0
-  min-height: 700px
   &__accordeon
     margin-top: 20px
-.blog
-  font-size: 0
-  background-color: $color-bg-secondary
-  min-height: 700px
 .gallery
-  position: relative
   height: 700px
-  &__img--first
-    max-width: 820px
-    height: 700px
-    position: relative
-    overflow: hidden
-  &__img--second
-    +size(60%, 570px)
-    max-width: 600px
+  &__img--1
     float: left
-    position: relative
-    overflow: hidden
-  &__img--third
-    height: 285px
-    max-width: 400px
-    position: relative
-    overflow: hidden
-  &__img--fourth
-    height: 285px
-    max-width: 400px
-    position: relative
-    overflow: hidden
+    width: 50%
+    height: 100%
+    z-index: -1
+  &__img--2
+    float: left
+    width: 30%
+    height: 580px
+  &__img--3, &__img--4
+    float: left
+    width: 20%
+    height: 290px
 .sponsors
-  padding: 0 8%
   &__badges
     overflow: hidden
     text-align: center
@@ -161,9 +150,15 @@
     height: 130px
     padding: 50px 0
 .contact
-  font-size: 0
-  position: relative
-  min-height: 700px
+  &__map
+    box-sizing: border-box
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  .gm-style-cc, .gmnoprint
+    display: none
   &__form
     display: table
     margin-top: 40px
@@ -172,13 +167,8 @@
     display: table-cell
     vertical-align: top
     width: 24%
-  &__pin
-    +c-align
 .footer
-  position: relative
-  box-sizing: border-box
   height: 200px
-  padding: 0 8%
   &__logo
     position: absolute
     top: 20px
@@ -189,74 +179,12 @@
   &__social
     position: absolute
     right: 8%
-    top: 115px
+    top: 110px
+  &__btn
+    display: none
+    position: absolute
+    right: 8%
+    top: 20px
   &__copyright
     position: absolute
     top: 140px
-.img-wrapper
-  width: 100%
-  height: 700px
-  position: relative
-  overflow: hidden
-.overlay
-  +size(100%)
-  z-index: 99
-  position: absolute
-  background-image: url(../img/design/01.png)
-.image
-  z-index: 0
-  display: block
-  position: absolute
-  left: -9999px
-  right: -9999px
-  top: -9999px
-  bottom: -9999px
-  margin: auto
-  min-width: 100%
-  min-height: 100%
-.slider
-  &__prev
-    position: absolute
-    z-index: 99
-    +v-align
-    left: 40px
-    &:hover, &:active
-      left: 35px
-  &__prev-sm
-    position: absolute
-    +v-align
-    left: 20px
-    &:hover, &:active
-      left: 16px
-  &__next
-    z-index: 99
-    position: absolute
-    +v-align
-    right: 40px
-    &:hover, &:active
-      right: 35px
-  &__next-sm
-    position: absolute
-    +v-align
-    right: 20px
-    &:hover, &:active
-      right: 16px
-#map
-  box-sizing: border-box
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-.gm-style-iw *
-  display: block
-  width: 100%
-.gm-style-iw h4, .gm-style-iw p
-  margin: 0
-  padding: 0
-.gm-style-iw a
-  color: #4272db
-.gm-style-cc, .gmnoprint
-  display: none
-#slider-sponsors
-  position: relative

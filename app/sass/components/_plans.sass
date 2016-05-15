@@ -1,8 +1,6 @@
 .plan
-  min-height: 370px
   height: 100%
   padding: 0 30px 0 45px
-  box-sizing: content-box
   &--regular
     +border(2, $color-bg-secondary)
   &--promo
@@ -29,7 +27,7 @@
     sup
       font-size: 18px
       span
-        border-bottom: 2px solid $color-bg-secondary
+        border-bottom: 2px solid
   &__price-promo
     display: block
     margin-bottom: 25px
@@ -40,16 +38,21 @@
       font-size: 28px
       span
         border-bottom: 2px solid
+
   &__feature
     display: block
     font-weight: 500
     font-size: 16px
     margin-bottom: 25px
     line-height: 1.1
+    position: relative
     svg
       position: absolute
+      top: 2px
       +size(16px, 14px)
-      fill: $color-text-primary
+    &--regular
+      svg
+        fill: $color-text-primary
     &--promo
       svg
         fill: $color-text-decorate

@@ -2,30 +2,37 @@
   font-size: 0
   &__item
     display: inline-block
-  &__item--timer
+  &__item-timer
     display: inline-block
     padding: 5px 10px
-  &__item--social
+  &__item-social
     display: inline-block
     margin-right: 10px
-  &__item--social-alt
+  &__item-social-alt
     display: inline-block
     margin-left: 6px
-  &__item--pager
+  &__item-pager
     display: inline-block
     vertical-align: bottom
     margin-right: 12px
-  &__item--sponsor
-    display: inline-block
-    width: 20%
-    margin-left: 10%
 .list-shedule
   max-height: 271px
   overflow-y: auto
+  &__item
+    height: 80px
+    width: 90%
+    box-sizing: border-box
+    border-top: 1px solid $color-bg-alt
+    padding-top: 10px
+    time
+      display: block
+      font: 700 24px $font-family-robotoslab
+    span
+      font-size: 16px
 .list-slider
   position: relative
   &--shedule
-    height: 440px
+    height: 450px
   &__item
     width: 100%
     position: absolute
@@ -77,22 +84,3 @@
     transform: translate( 0 , 0 )
     transition: all .25s ease
     z-index: 2
-.row
-  width: 100%
-  display: table
-  height: 100%
-.cell
-  vertical-align: top
-  height: 100%
-  display: table-cell
-.cell-40
-  vertical-align: top
-  width: 60%
-  padding: 0 10%
-  height: 100%
-  display: table-cell
-.cell-c
-  vertical-align: top
-  width: 60%
-  padding: 0 20%
-  display: table-cell

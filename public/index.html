@@ -14,8 +14,8 @@
   <body>
     <div class="page">
       <div class="top-wrapper">
-        <header class="header">
-          <h3 class="header__logo logo logo--main"><a href="#">event<span>ly</span></a></h3>
+        <header id="header" class="header">
+          <h3 class="header__logo logo logo--main"><a href="index.html">event<span>ly</span></a></h3>
           <button id="btn-burger" class="header__burger btn-burger">&#9776;</button>
           <ul id="header-nav" class="list-h header__nav">
             <li class="list-h__item"><a href="index.html" class="link-nav">home</a></li>
@@ -28,35 +28,35 @@
           </ul>
           <time datetime="2016-10-15/2016-10-21" class="header__promo-date label-promo-date">15-21 October</time>
           <h1 class="header__promo-header header-promo">london</h1>
-          <h2 class="header__promo-header label-promo-caption">business <strong>conference</strong></h2>
-          <div class="header__promo-button">
-            <button class="btn-promo">Join the <strong>Conference</strong></button>
+          <h2 class="header__promo-header header-promo-caption">business <strong>conference</strong></h2>
+          <div id="promo-btn" class="header__promo-button">
+            <button onclick="smoothScroll('register')" class="btn-promo">Join the <strong>Conference</strong></button>
           </div>
-          <ul class="list-h header__timer">
-            <li class="list-h__item--timer">
-              <div class="label-timer-piece"> 
+          <ul id="timer" class="header__timer list-h">
+            <li class="list-h__item-timer">
+              <div class="label-timer-piece">
                 <div class="label-timer-piece__text"><strong id="timer-day"></strong><span>days</span></div>
               </div>
             </li>
-            <li class="list-h__item--timer">
-              <div class="label-timer-piece"> 
+            <li class="list-h__item-timer">
+              <div class="label-timer-piece">
                 <div class="label-timer-piece__text"><strong id="timer-hour"></strong><span>hours</span></div>
               </div>
             </li>
-            <li class="list-h__item--timer">
+            <li class="list-h__item-timer">
               <div class="label-timer-piece">
                 <div class="label-timer-piece__text"><strong id="timer-min"></strong><span>min.</span></div>
               </div>
             </li>
-            <li class="list-h__item--timer">
-              <div class="label-timer-piece"> 
+            <li class="list-h__item-timer">
+              <div class="label-timer-piece">
                 <div class="label-timer-piece__text"><strong id="timer-sec"></strong><span>sec.</span></div>
               </div>
             </li>
           </ul>
-          <div class="header__btn-scroll">
+          <div id="btn-scroll" class="header__btn-scroll">
             <div class="btn-scroll"> 
-              <button class="btn-scroll__icon">
+              <button onclick="smoothScroll('about')" class="btn-scroll__icon">
                 <svg>
                   <use xlink:href="img/design/sprite.svg#icon-arrow-down"></use>
                 </svg>
@@ -64,50 +64,48 @@
             </div>
           </div>
         </header>
-        <section id="about" class="about">
-          <div class="col-50 col-left-padded">
-            <div class="img-wrapper"><img src="img/design/about-bg.jpg" srcset="img/design/about-bg.jpg 1x, img/design/about-bg@2.jpg 2x" class="image"></div>
-          </div>
-          <div class="col-50 col-right-padded--alt">
+        <section id="about" class="section about">
+          <div class="col-50 img-wrapper"><img src="img/сontent/about-bg.jpg" srcset="img/content/about-bg.jpg 1x, img/content/about-bg@2x.jpg 2x" class="img"></div>
+          <div class="col-50 col--right">
             <h4 class="section__header--alt header-section header-section--primary">about</h4>
             <h5 class="section__subject header-subject">London</h5>
             <h6 class="section__caption header-caption">Business Conference</h6>
             <time class="section__date label-caption label-caption--date">15 - 21 October</time>
-            <div class="section__text">
-              <p class="p-common">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu. </p>
-              <p class="section__p section__p p-common">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+            <div class="section__text section__text--l">
+              <p class="p p--common">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu. </p>
+              <p class="p p--common">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
             </div>
           </div>
         </section>
       </div>
-      <section id="speakers" class="speakers">
-        <div class="col-50 col-left-padded">
+      <section id="speakers" class="section speakers">
+        <div class="col-50 col--left">
           <h4 class="header-section header-section--secondary">speakers</h4>
           <ul id="slider-info" class="list-slider">
             <li class="list-slider__item">
-              <h5 class="section__subject header-subject">Kane W. Doe  </h5>
+              <h5 class="section__subject header-subject">Kane W. Doe</h5>
               <h6 class="section__caption header-caption-alt">Digital Designer</h6>
-              <div class="section__text">
-                <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
-                <p class="p-common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+              <div class="section__text section__text--l">
+                <p class="p p--common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+                <p class="p p--common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
               </div>
-              <div class="section__contacts"><a href="mailto:#" class="link-email"> <strong>kanew.doe</strong>@conference.co</a>
+              <div class="section__contacts"><a href="mailto:#" class="link-common"> <strong>kanew.doe</strong>@conference.co</a>
                 <ul class="section__social list-h">
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
@@ -125,29 +123,29 @@
               </div>
             </li>
             <li class="list-slider__item hidden">
-              <h5 class="section__subject header-subject">Emma Watson  </h5>
+              <h5 class="section__subject header-subject">Emma Watson</h5>
               <h6 class="section__caption header-caption-alt">Senior developer</h6>
-              <div class="section__text">
-                <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
-                <p class="p-common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+              <div class="section__text section__text--l">
+                <p class="p p--common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+                <p class="p p--common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
               </div>
-              <div class="section__contacts"><a href="mailto:#" class="link-email"> <strong>emma.watson</strong>@conference.co</a>
+              <div class="section__contacts"><a href="mailto:#" class="link-common"> <strong>emma.watson</strong>@conference.co</a>
                 <ul class="section__social list-h">
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
@@ -165,29 +163,29 @@
               </div>
             </li>
             <li class="list-slider__item hidden">
-              <h5 class="section__subject header-subject">Carl Johnson  </h5>
+              <h5 class="section__subject header-subject">Carl Johnson</h5>
               <h6 class="section__caption header-caption-alt">Stock exchange trader</h6>
-              <div class="section__text">
-                <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
-                <p class="p-common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+              <div class="section__text section__text--l">
+                <p class="p p--common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+                <p class="p p--common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
               </div>
-              <div class="section__contacts"><a href="mailto:#" class="link-email"> <strong>carl.johnson</strong>@conference.co</a>
+              <div class="section__contacts"><a href="mailto:#" class="link-common"> <strong>carl.johnson</strong>@conference.co</a>
                 <ul class="section__social list-h">
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
@@ -205,29 +203,29 @@
               </div>
             </li>
             <li class="list-slider__item hidden">
-              <h5 class="section__subject header-subject">Constantine Stromberg  </h5>
+              <h5 class="section__subject header-subject">Constantine Stromberg</h5>
               <h6 class="section__caption header-caption-alt">CEO</h6>
-              <div class="section__text">
-                <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
-                <p class="p-common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+              <div class="section__text section__text--l">
+                <p class="p p--common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+                <p class="p p--common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
               </div>
-              <div class="section__contacts"><a href="mailto:#" class="link-email"> <strong>c.stromberg</strong>@conference.co</a>
+              <div class="section__contacts"><a href="mailto:#" class="link-common"> <strong>c.stromberg</strong>@conference.co</a>
                 <ul class="section__social list-h">
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
@@ -246,154 +244,149 @@
             </li>
           </ul>
         </div>
-        <div class="col-50">
-          <div id="slider-speaker" class="img-wrapper">
-            <div class="overlay"></div><img src="img/content/speaker-1.jpg" srcset="img/content/speaker-1.jpg 1x, img/content/speaker-1@2x.jpg 2x" class="image"><img src="img/content/speaker-2.jpg" srcset="img/content/speaker-2.jpg 1x, img/content/speaker-2@2x.jpg 2x" class="image"><img src="img/content/speaker-3.jpg" srcset="img/content/speaker-3.jpg 1x, img/content/speaker-3@2x.jpg 2x" class="image"><img src="img/content/speaker-4.jpg" srcset="img/content/speaker-4.jpg 1x, img/content/speaker-4@2x.jpg 2x" class="image">
-            <button class="slider__prev btn-slider">
-              <svg>
-                <use xlink:href="img/design/sprite.svg#icon-arrow-left"></use>
-              </svg>
-            </button>
-            <button class="slider__next btn-slider">
-              <svg>
-                <use xlink:href="img/design/sprite.svg#icon-arrow-right"></use>
-              </svg>
-            </button>
-          </div>
+        <div id="slider-speaker" class="col-50 img-wrapper"><img src="img/content/speaker-1.jpg" srcset="img/content/speaker-1.jpg 1x, img/content/speaker-1@2x.jpg 2x" class="img"><img src="img/content/speaker-2.jpg" srcset="img/content/speaker-2.jpg 1x, img/content/speaker-2@2x.jpg 2x" class="img"><img src="img/content/speaker-3.jpg" srcset="img/content/speaker-3.jpg 1x, img/content/speaker-3@2x.jpg 2x" class="img"><img src="img/content/speaker-4.jpg" srcset="img/content/speaker-4.jpg 1x, img/content/speaker-4@2x.jpg 2x" class="img">
+          <button class="section__slider-prev btn-slider">
+            <svg>
+              <use xlink:href="img/design/sprite.svg#icon-arrow-left"></use>
+            </svg>
+          </button>
+          <button class="section__slider-next btn-slider">
+            <svg>
+              <use xlink:href="img/design/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
         </div>
       </section>
-      <section id="shedule" class="shedule">
-        <div class="col-50">
-          <div class="img-wrapper">
-            <div class="shedule__caption label-shedule-caption"><span>business </span><strong> <em>&amp;</em><br>idea</strong></div><img src="img/design/shedule-bg.jpg" srcset="img/design/shedule-bg.jpg 1x, img/design/shedule-bg@2x.jpg 2x" class="image">
-          </div>
+      <section id="shedule" class="section shedule">
+        <div class="col-50 img-wrapper"><img src="img/content/shedule-bg.jpg" srcset="img/content/shedule-bg.jpg 1x, img/content/shedule-bg@2x.jpg 2x" class="img">
+          <div class="shedule__caption"><span>business </span><strong> <em>&amp;</em><br>idea</strong></div>
         </div>
-        <div class="col-50 col-right-padded--alt">
+        <div class="col-50 col--right">
           <h4 class="header-section header-section--primary">shedule</h4>
           <ul id="slider-shedule" class="list-slider list-slider--shedule">
             <li class="list-slider__item">
               <h5 class="section__subject header-subject">15 October</h5>
               <h6 class="section__caption header-caption">Business Conference</h6>
-              <ul class="section__shedule list-shedule">
-                <li class="label-shedule-item">
+              <ul class="shedule__shedule list-shedule">
+                <li class="list-shedule__item">
                   <time>09:00</time><span>Business idea &amp; concept</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>12:00</time><span>Business conference details</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>15:00</time><span>Conference calling</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>18:00</time><span>Coffee break</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>21:00</time><span>Afterparty</span>
                 </li>
               </ul>
             </li>
             <li class="list-slider__item hidden">
               <h5 class="section__subject header-subject">16 October</h5>
-              <h6 class="section__caption header-caption">Business Conference</h6>
-              <ul class="section__shedule list-shedule">
-                <li class="label-shedule-item">
+              <h6 class="section__caption header-caption">Brainstorm day</h6>
+              <ul class="shedule__shedule list-shedule">
+                <li class="list-shedule__item">
                   <time>09:00</time><span>Breakfast</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>12:00</time><span>Pienary session</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>14:00</time><span>Parallel track session</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>16:00</time><span>VIP reception</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>20:00</time><span>Optional social events</span>
                 </li>
               </ul>
             </li>
             <li class="list-slider__item hidden">
               <h5 class="section__subject header-subject">17 October</h5>
-              <h6 class="section__caption header-caption">Business Conference</h6>
-              <ul class="section__shedule list-shedule">
-                <li class="label-shedule-item">
+              <h6 class="section__caption header-caption">Crucial meeting</h6>
+              <ul class="shedule__shedule list-shedule">
+                <li class="list-shedule__item">
                   <time>09:00</time><span>ICSB board meeting</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>11:00</time><span>Policy forum</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>16:00</time><span>Coaching lounge open</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>18:00</time><span>Co-working practice</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>21:00</time><span>Afterparty</span>
                 </li>
               </ul>
             </li>
             <li class="list-slider__item hidden">
               <h5 class="section__subject header-subject">18 October</h5>
-              <h6 class="section__caption header-caption">Business Conference</h6>
-              <ul class="section__shedule list-shedule">
-                <li class="label-shedule-item">
+              <h6 class="section__caption header-caption">Clothing ceremony</h6>
+              <ul class="shedule__shedule list-shedule">
+                <li class="list-shedule__item">
                   <time>09:00</time><span>Breakfast</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>12:00</time><span>AGM meeting</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>18:00</time><span>Clothing lunch ceremony</span>
                 </li>
-                <li class="label-shedule-item">
+                <li class="list-shedule__item">
                   <time>21:00</time><span>Gala dinner</span>
                 </li>
               </ul>
             </li>
           </ul>
-          <ul class="section__pager list-h">
-            <li class="list-h__item--pager">
-              <button class="button-page button-page--active">.01</button>
+          <ul class="shedule__pager list-h">
+            <li class="list-h__item-pager">
+              <button class="btn-page btn-page--active">.01</button>
             </li>
-            <li class="list-h__item--pager">
-              <button class="button-page">.02</button>
+            <li class="list-h__item-pager">
+              <button class="btn-page">.02</button>
             </li>
-            <li class="list-h__item--pager">
-              <button class="button-page">.03</button>
+            <li class="list-h__item-pager">
+              <button class="btn-page">.03</button>
             </li>
             <li class="list-h__item">
-              <button class="button-page">.04</button>
+              <button class="btn-page">.04</button>
             </li>
           </ul>
         </div>
       </section>
-      <section class="register">
+      <section id="register" class="register">
         <h4 class="header-section header-section--secondary">register & pricing</h4>
-        <div class="col-50 col-50--sm">
+        <div class="col-50-s">
           <h5 class="section__subject header-subject">Join conference</h5>
           <h6 class="section__caption header-caption-alt">London conference</h6>
-          <div class="section__text--sm">
-            <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+          <div class="section__text section__text--s">
+            <p class="p p--common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
           </div>
-          <div class="section__contacts"><a href="mailto:#" class="link-email"> <strong>kanew.doe</strong>@conference.co</a>
+          <div class="section__contacts"><a href="mailto:someone@email.com" class="link-common"> <strong>kanew.doe</strong>@conference.co</a>
             <ul class="section__social list-h">
-              <li class="list-h__item--social">
+              <li class="list-h__item-social">
                 <button class="btn-social">
                   <svg>
                     <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
                   </svg>
                 </button>
               </li>
-              <li class="list-h__item--social">
+              <li class="list-h__item-social">
                 <button class="btn-social">
                   <svg>
                     <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
                   </svg>
                 </button>
               </li>
-              <li class="list-h__item--social">
+              <li class="list-h__item-social">
                 <button class="btn-social">
                   <svg>
                     <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
@@ -410,12 +403,12 @@
             </ul>
           </div>
         </div>
-        <div class="col-50 col-50--sm">
+        <div class="col-50-s">
           <form class="register__form">
             <input placeholder="Name &amp; Surname" class="input">
-            <input placeholder="Email Address" class="section__input input">
-            <input placeholder="Phone Number" class="section__input input">
-            <div class="select-wrapper section__input">
+            <input placeholder="Email Address" class="form__element input">
+            <input placeholder="Phone Number" class="form__element input">
+            <div class="select-wrapper form__element">
               <select>
                 <option disabled selected>Select your plan...</option>
                 <option>$ 101 - Personal</option>
@@ -423,7 +416,7 @@
                 <option>$ 120 - Company</option>
               </select>
             </div>
-            <button class="section__input btn-join">Join the <strong>Conference</strong>
+            <button class="form__element btn-join">Join the <strong>Conference</strong>
               <svg>
                 <use xlink:href="img/design/sprite.svg#icon-arrow-right"></use>
               </svg>
@@ -432,92 +425,84 @@
         </div>
       </section>
       <section class="plans">
-        <div class="row">
+        <div class="table">
           <div class="cell">
-            <div class="plan plan--regular">
-              <div class="plan__content"><strong class="plan__name-regular">personal</strong><strong class="plan__price-regular">101<sup> <span>.00</span><strong> $</strong></sup></strong>
-                <p class="plan__feature plan__feature--regular">
-                  <svg>
-                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
-                  </svg><span>Lipsum dolor sit amet</span>
-                </p>
-                <p class="plan__feature plan__feature--regular">
-                  <svg>
-                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
-                  </svg><span>Etiam id lacinia risus, at vehicula lectus</span>
-                </p>
-                <p class="plan__feature plan__feature--regular">
-                  <svg>
-                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
-                  </svg><span>Fusce porttitor quis enim</span>
-                </p>
-                <p class="plan__feature plan__feature--regular">
-                  <svg>
-                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
-                  </svg><span>Vestibulum molestie</span>
-                </p>
-              </div>
+            <div class="plan plan--regular"><strong class="plan__name-regular">personal</strong><strong class="plan__price-regular">101<sup> <span>.00</span> $</sup></strong>
+              <p class="plan__feature plan__feature--regular">
+                <svg>
+                  <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                </svg><span>Lipsum dolor sit amet</span>
+              </p>
+              <p class="plan__feature plan__feature--regular">
+                <svg>
+                  <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                </svg><span>Etiam id lacinia risus, at vehicula lectus</span>
+              </p>
+              <p class="plan__feature plan__feature--regular">
+                <svg>
+                  <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                </svg><span>Fusce porttitor quis enim</span>
+              </p>
+              <p class="plan__feature plan__feature--regular">
+                <svg>
+                  <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                </svg><span>Vestibulum molestie</span>
+              </p>
             </div>
           </div>
-          <div class="cell-40">
-            <div class="plan plan--promo">
-              <div class="plan__content"><strong class="plan__name-promo">business</strong><strong class="plan__price-promo">114<sup> <span>.00</span><strong> $</strong></sup></strong>
-                <p class="plan__feature plan__feature--promo">
-                  <svg>
-                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
-                  </svg><span>Ut ac tempor lectus. Curabitur a neque odio. Lorem ipsum dolor</span>
-                </p>
-                <p class="plan__feature plan__feature--promo">
-                  <svg>
-                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
-                  </svg><span>Etiam sit amet arcu et lacus tincidunt elementum. Vestibulum molestie vestibulum</span>
-                </p>
-                <p class="plan__feature plan__feature--promo">
-                  <svg>
-                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
-                  </svg><span>Morbi eget arcu a massa ultricies egestas</span>
-                </p>
-                <p class="plan__feature plan__feature--promo">
-                  <svg>
-                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
-                  </svg><span>Suspendisse ut lobortis nisl. Mauris non porttitor mi</span>
-                </p>
-              </div>
+          <div class="cell cell-60">
+            <div class="plan plan--promo"><strong class="plan__name-promo">business</strong><strong class="plan__price-promo">114<sup> <span>.00</span> $</sup></strong>
+              <p class="plan__feature plan__feature--promo">
+                <svg>
+                  <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                </svg><span>Ut ac tempor lectus. Curabitur a neque odio. Lorem ipsum dolor</span>
+              </p>
+              <p class="plan__feature plan__feature--promo">
+                <svg>
+                  <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                </svg><span>Etiam sit amet arcu et lacus tincidunt elementum. Vestibulum molestie vestibulum</span>
+              </p>
+              <p class="plan__feature plan__feature--promo">
+                <svg>
+                  <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                </svg><span>Morbi eget arcu a massa ultricies egestas</span>
+              </p>
+              <p class="plan__feature plan__feature--promo">
+                <svg>
+                  <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                </svg><span>Suspendisse ut lobortis nisl. Mauris non porttitor mi</span>
+              </p>
             </div>
           </div>
           <div class="cell">
-            <div class="plan plan--regular">
-              <div class="plan__content"><strong class="plan__name-regular">company</strong><strong class="plan__price-regular">120<sup> <span>.00</span><strong> $</strong></sup></strong>
-                <p class="plan__feature plan__feature--regular">
-                  <svg>
-                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
-                  </svg><span>Lipsum dolor sit amet</span>
-                </p>
-                <p class="plan__feature plan__feature--regular">
-                  <svg>
-                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
-                  </svg><span>Etiam id lacinia risus, at vehicula lectus</span>
-                </p>
-                <p class="plan__feature plan__feature--regular">
-                  <svg>
-                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
-                  </svg><span>Fusce porttitor quis enim</span>
-                </p>
-                <p class="plan__feature plan__feature--regular">
-                  <svg>
-                    <use xlink:href="img/design/sprite.svg#icon-check"></use>
-                  </svg><span>Vestibulum molestie</span>
-                </p>
-              </div>
+            <div class="plan plan--regular"><strong class="plan__name-regular">company</strong><strong class="plan__price-regular">120<sup> <span>.00</span> $</sup></strong>
+              <p class="plan__feature plan__feature--regular">
+                <svg>
+                  <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                </svg><span>Lipsum dolor sit amet</span>
+              </p>
+              <p class="plan__feature plan__feature--regular">
+                <svg>
+                  <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                </svg><span>Etiam id lacinia risus, at vehicula lectus</span>
+              </p>
+              <p class="plan__feature plan__feature--regular">
+                <svg>
+                  <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                </svg><span>Fusce porttitor quis enim</span>
+              </p>
+              <p class="plan__feature plan__feature--regular">
+                <svg>
+                  <use xlink:href="img/design/sprite.svg#icon-check"></use>
+                </svg><span>Vestibulum molestie</span>
+              </p>
             </div>
           </div>
         </div>
       </section>
-      <section class="faq">
-        <div class="col-50">
-          <div class="img-wrapper"><img src="img/design/faq-bg.jpg" srcset="img/design/faq-bg.jpg 1x, img/design/faq-bg@2x.jpg 2x" class="image"></div>
-        </div>
-        <div class="col-50 col-right-padded--alt">
+      <section class="section faq">
+        <div class="col-50 img-wrapper"><img src="img/content/faq-bg.jpg" srcset="img/content/faq-bg.jpg 1x, img/content/faq-bg@2x.jpg 2x" class="img"></div>
+        <div class="col-50 col--right">
           <h4 class="header-section header-section--primary">FAQ</h4>
           <h5 class="section__subject header-subject">Event FAQ</h5>
           <h6 class="section__caption header-caption">Find your answers</h6>
@@ -529,7 +514,7 @@
                   <use xlink:href="img/design/sprite.svg#icon-arrow-down-s"></use>
                 </svg>
               </button><strong>How to make new event?</strong>
-              <p class="p-answer">Vestibulum sit amet tincidunt urna, eget ullamcorper purus. Aenean feugiat quis tortor vitae fringilla. Pellentesque augue nisl, condimentum at sem et, fermentum varius ligula. Nulla dignissim nulla eget congue cursus.</p>
+              <p class="p p--answer">Vestibulum sit amet tincidunt urna, eget ullamcorper purus. Aenean feugiat quis tortor vitae fringilla. Pellentesque augue nisl, condimentum at sem et, fermentum varius ligula. Nulla dignissim nulla eget congue cursus.</p>
             </li>
             <li class="list-accordeon__item">
               <input type="checkbox" checked="checked"/>
@@ -538,7 +523,7 @@
                   <use xlink:href="img/design/sprite.svg#icon-arrow-down-s"></use>
                 </svg>
               </button><strong>How to set price?</strong>
-              <p class="p-answer">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit.</p>
+              <p class="p p--answer">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit.</p>
             </li>
             <li class="list-accordeon__item">
               <input type="checkbox" checked="checked"/>
@@ -547,7 +532,7 @@
                   <use xlink:href="img/design/sprite.svg#icon-arrow-down-s"></use>
                 </svg>
               </button><strong>How to change event data?</strong>
-              <p class="p-answer">Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+              <p class="p p--answer">Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
             </li>
             <li class="list-accordeon__item">
               <input type="checkbox" checked="checked"/>
@@ -556,7 +541,7 @@
                   <use xlink:href="img/design/sprite.svg#icon-arrow-down-s"></use>
                 </svg>
               </button><strong>How to skip custom part?</strong>
-              <p class="p-answer">Etiam sit amet arcu et lacus tincidunt elementum. Vestibulum molestie vestibulum. Morbi eget arcu a massa ultricies egestas. Suspendisse ut lobortis nisl. Mauris non porttitor mi.</p>
+              <p class="p p--answer">Etiam sit amet arcu et lacus tincidunt elementum. Vestibulum molestie vestibulum. Morbi eget arcu a massa ultricies egestas. Suspendisse ut lobortis nisl. Mauris non porttitor mi.</p>
             </li>
             <li class="list-accordeon__item">
               <input type="checkbox" checked="checked"/>
@@ -565,7 +550,7 @@
                   <use xlink:href="img/design/sprite.svg#icon-arrow-down-s"></use>
                 </svg>
               </button><strong>How to upgrade your plan?</strong>
-              <p class="p-answer">Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu. Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+              <p class="p p--answer">Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu. Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
             </li>
             <li class="list-accordeon__item">
               <input type="checkbox" checked="checked"/>
@@ -574,39 +559,39 @@
                   <use xlink:href="img/design/sprite.svg#icon-arrow-down-s"></use>
                 </svg>
               </button><strong>How to make $1 billion playing minecraft</strong>
-              <p class="p-answer">Pellentesque augue nisl, condimentum at sem et, fermentum varius ligula. Vestibulum sit amet tincidunt urna, eget ullamcorper purus. Aenean feugiat quis tortor vitae fringilla.</p>
+              <p class="p p--answer">Pellentesque augue nisl, condimentum at sem et, fermentum varius ligula. Vestibulum sit amet tincidunt urna, eget ullamcorper purus. Aenean feugiat quis tortor vitae fringilla.</p>
             </li>
           </ul>
         </div>
       </section>
-      <section id="blog" class="blog">
-        <div class="col-50 col-left-padded">
+      <section id="blog" class="section blog">
+        <div class="col-50 col--left">
           <h4 class="header-section header-section--secondary">blog</h4>
           <ul id="slider-post" class="list-slider">
             <li class="list-slider__item">
               <h5 class="section__subject header-subject">Business idea</h5>
               <h6 class="section__caption header-caption-alt">Kane W. Doe</h6>
-              <div class="section__text">
-                <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
-                <p class="p-common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+              <div class="section__text section__text--l">
+                <p class="p p--common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+                <p class="p p--common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
               </div>
-              <div class="section__contacts"><a href="#" class="link-email"> <strong>11 October 2016</strong></a>
+              <div class="section__contacts"><a href="#" class="link-common"> <strong>11 October 2016</strong></a>
                 <ul class="section__social list-h">
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
@@ -626,27 +611,27 @@
             <li class="list-slider__item hidden">
               <h5 class="section__subject header-subject">Self-coaching</h5>
               <h6 class="section__caption header-caption-alt">Robert Smith</h6>
-              <div class="section__text">
-                <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
-                <p class="p-common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+              <div class="section__text section__text--l">
+                <p class="p p--common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+                <p class="p p--common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
               </div>
-              <div class="section__contacts"><a href="#" class="link-email"> <strong>2 September 2016</strong></a>
+              <div class="section__contacts"><a href="#" class="link-common"> <strong>2 September 2016</strong></a>
                 <ul class="section__social list-h">
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
@@ -666,27 +651,27 @@
             <li class="list-slider__item hidden">
               <h5 class="section__subject header-subject">Upgrade your skills</h5>
               <h6 class="section__caption header-caption-alt">Jonathan Owen</h6>
-              <div class="section__text">
-                <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
-                <p class="p-common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+              <div class="section__text section__text--l">
+                <p class="p p--common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+                <p class="p p--common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
               </div>
-              <div class="section__contacts"><a href="#" class="link-email"> <strong>24 August 2016</strong></a>
+              <div class="section__contacts"><a href="#" class="link-common"> <strong>24 August 2016</strong></a>
                 <ul class="section__social list-h">
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
@@ -706,27 +691,27 @@
             <li class="list-slider__item hidden">
               <h5 class="section__subject header-subject">What is Success?</h5>
               <h6 class="section__caption header-caption-alt">Marcus van Steinbeck</h6>
-              <div class="section__text">
-                <p class="p-common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
-                <p class="p-common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
+              <div class="section__text section__text--l">
+                <p class="p p--common-alt">Sed vitae tincidunt ante, vel lacinia odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi feugiat nisi nec ex convallis fringilla. Cras sit amet fermentum elit. Sed fermentum sollicitudin neque, ut pulvinar erat lobortis a. Maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu.</p>
+                <p class="p p--common-alt">Proin quis pellentesque orci. Vestibulum congue elit vitae nunc hendrerit vehicula.</p>
               </div>
-              <div class="section__contacts"><a href="#" class="link-email"> <strong>12 August 2016</strong></a>
+              <div class="section__contacts"><a href="#" class="link-common"> <strong>12 August 2016</strong></a>
                 <ul class="section__social list-h">
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-fb-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-twitter-s"></use>
                       </svg>
                     </button>
                   </li>
-                  <li class="list-h__item--social">
+                  <li class="list-h__item-social">
                     <button class="btn-social">
                       <svg>
                         <use xlink:href="img/design/sprite.svg#icon-gplus-s"></use>
@@ -745,128 +730,142 @@
             </li>
           </ul>
         </div>
-        <div class="col-50">
-          <div id="slider-blog" class="img-wrapper"><img src="img/content/blog-1.jpg" srcset="img/content/blog-1.jpg 1x, img/content/blog-1@2x.jpg 2x" class="image"><img src="img/content/blog-2.jpg" srcset="img/content/blog-2.jpg 1x, img/content/blog-2@2x.jpg 2x" class="image"><img src="img/content/blog-3.jpg" srcset="img/content/blog-3.jpg 1x, img/content/blog-3@2x.jpg 2x" class="image"><img src="img/content/blog-4.jpg" srcset="img/content/blog-4.jpg 1x, img/content/blog-4@2x.jpg 2x" class="image">
-            <button class="slider__prev btn-slider">
-              <svg>
-                <use xlink:href="img/design/sprite.svg#icon-arrow-left"></use>
-              </svg>
-            </button>
-            <button class="slider__next btn-slider">
-              <svg>
-                <use xlink:href="img/design/sprite.svg#icon-arrow-right"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </section>
-      <!--include includes/_gallery-->
-      <section id="sponsors" class="sponsors">
-        <h4 class="header-section header-section--alt">sponsors</h4>
-        <div id="slider-sponsors">
-          <ul class="list-slider sponsors__badges">
-            <li class="list-slider__item">
-              <div class="col-20">
-                <div class="label-sponsor">
-                  <div class="label-sponsor__logo"><img src="img/content/sponsor-1.svg"></div>
-                  <div class="label-sponsor__title">
-                    <div class="label-sponsor__text"><strong>dinner</strong><span>sponsor</span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-20">
-                <div class="label-sponsor">
-                  <div class="label-sponsor__logo"><img src="img/content/sponsor-2.svg"></div>
-                  <div class="label-sponsor__title">
-                    <div class="label-sponsor__text"><strong>location</strong><span>sponsor</span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-20">
-                <div class="label-sponsor">
-                  <div class="label-sponsor__logo"><img src="img/content/sponsor-4.svg"></div>
-                  <div class="label-sponsor__title">
-                    <div class="label-sponsor__text"><strong>digital</strong><span>sponsor</span></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="list-slider__item">
-              <div class="col-20">
-                <div class="label-sponsor">
-                  <div class="label-sponsor__logo"><img src="img/content/sponsor-3.svg"></div>
-                  <div class="label-sponsor__title">
-                    <div class="label-sponsor__text"><strong>dinner</strong><span>sponsor</span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-20">
-                <div class="label-sponsor">
-                  <div class="label-sponsor__logo"><img src="img/content/sponsor-5.svg"></div>
-                  <div class="label-sponsor__title">
-                    <div class="label-sponsor__text"><strong>chillout</strong><span>sponsor</span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-20">
-                <div class="label-sponsor">
-                  <div class="label-sponsor__logo"><img src="img/content/sponsor-6.svg"></div>
-                  <div class="label-sponsor__title">
-                    <div class="label-sponsor__text"><strong>fashion</strong><span>sponsor</span></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="list-slider__item">
-              <div class="col-20">
-                <div class="label-sponsor">
-                  <div class="label-sponsor__logo"><img src="img/content/sponsor-7.svg"></div>
-                  <div class="label-sponsor__title">
-                    <div class="label-sponsor__text"><strong>luxury</strong><span>sponsor</span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-20">
-                <div class="label-sponsor">
-                  <div class="label-sponsor__logo"><img src="img/content/sponsor-8.svg"></div>
-                  <div class="label-sponsor__title">
-                    <div class="label-sponsor__text"><strong>media</strong><span>sponsor</span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-20">
-                <div class="label-sponsor">
-                  <div class="label-sponsor__logo"><img src="img/content/sponsor-9.svg"></div>
-                  <div class="label-sponsor__title">
-                    <div class="label-sponsor__text"><strong>finance</strong><span>sponsor</span></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <button class="slider__prev-sm btn-slider-sm">
+        <div id="slider-blog" class="col-50 img-wrapper"><img src="img/content/blog-1.jpg" srcset="img/content/blog-1.jpg 1x, img/content/blog-1@2x.jpg 2x" class="img"><img src="img/content/blog-2.jpg" srcset="img/content/blog-2.jpg 1x, img/content/blog-2@2x.jpg 2x" class="img"><img src="img/content/blog-3.jpg" srcset="img/content/blog-3.jpg 1x, img/content/blog-3@2x.jpg 2x" class="img"><img src="img/content/blog-4.jpg" srcset="img/content/blog-4.jpg 1x, img/content/blog-4@2x.jpg 2x" class="img">
+          <button class="section__slider-prev btn-slider">
             <svg>
               <use xlink:href="img/design/sprite.svg#icon-arrow-left"></use>
             </svg>
           </button>
-          <button class="slider__next-sm btn-slider-sm">
+          <button class="section__slider-next btn-slider">
             <svg>
               <use xlink:href="img/design/sprite.svg#icon-arrow-right"></use>
             </svg>
           </button>
         </div>
       </section>
-      <section id="contact" class="contact">
-        <div id="map"></div>
-        <div class="col-50 col-right-padded--alt col--faded">
+      <section id="slider-gallery" class="gallery">
+        <div class="section__header--gallery">
+          <h4 class="header-section header-section--primary">gallery</h4>
+        </div>
+        <div class="gallery__img--1 img-wrapper"><img src="img/content/preview-1.jpg" class="img"><img src="img/content/preview-5.jpg" class="img"><img src="img/content/preview-9.jpg" class="img"></div>
+        <div class="gallery__img--2 img-wrapper"><img src="img/content/preview-2.jpg" class="img"><img src="img/content/preview-6.jpg" class="img"><img src="img/content/preview-10.jpg" class="img"></div>
+        <div class="gallery__img--3 img-wrapper"><img src="img/content/preview-3.jpg" class="img"><img src="img/content/preview-7.jpg" class="img"><img src="img/content/preview-11.jpg" class="img"></div>
+        <div class="gallery__img--4 img-wrapper"><img src="img/content/preview-4.jpg" class="img"><img src="img/content/preview-8.jpg" class="img"><img src="img/content/preview-12.jpg" class="img"></div>
+        <button class="section__slider-prev btn-slider">
+          <svg>
+            <use xlink:href="img/design/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="section__slider-next btn-slider">
+          <svg>
+            <use xlink:href="img/design/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </section>
+      <section id="sponsors" class="sponsors">
+        <h4 class="header-section header-section--alt">sponsors</h4>
+        <ul id="slider-sponsors" class="sponsors__badges list-slider">
+          <li class="list-slider__item">
+            <div class="col-20">
+              <div class="label-sponsor">
+                <div class="label-sponsor__logo"><img src="img/content/sponsor-3.svg"/></div>
+                <div class="label-sponsor__title">
+                  <div class="label-sponsor__text"><strong>dinner</strong><span>sponsor</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-20">
+              <div class="label-sponsor">
+                <div class="label-sponsor__logo"><img src="img/content/sponsor-5.svg"/></div>
+                <div class="label-sponsor__title">
+                  <div class="label-sponsor__text"><strong>chillout</strong><span>sponsor</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-20">
+              <div class="label-sponsor">
+                <div class="label-sponsor__logo"><img src="img/content/sponsor-4.svg"/></div>
+                <div class="label-sponsor__title">
+                  <div class="label-sponsor__text"><strong>digital</strong><span>sponsor</span></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-slider__item">
+            <div class="col-20">
+              <div class="label-sponsor">
+                <div class="label-sponsor__logo"><img src="img/content/sponsor-1.svg"/></div>
+                <div class="label-sponsor__title">
+                  <div class="label-sponsor__text"><strong>dinner</strong><span>sponsor</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-20">
+              <div class="label-sponsor">
+                <div class="label-sponsor__logo"><img src="img/content/sponsor-2.svg"/></div>
+                <div class="label-sponsor__title">
+                  <div class="label-sponsor__text"><strong>location</strong><span>sponsor</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-20">
+              <div class="label-sponsor">
+                <div class="label-sponsor__logo"><img src="img/content/sponsor-6.svg"/></div>
+                <div class="label-sponsor__title">
+                  <div class="label-sponsor__text"><strong>fashion</strong><span>sponsor</span></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-slider__item">
+            <div class="col-20">
+              <div class="label-sponsor">
+                <div class="label-sponsor__logo"><img src="img/content/sponsor-7.svg"/></div>
+                <div class="label-sponsor__title">
+                  <div class="label-sponsor__text"><strong>luxury</strong><span>sponsor</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-20">
+              <div class="label-sponsor">
+                <div class="label-sponsor__logo"><img src="img/content/sponsor-8.svg"/></div>
+                <div class="label-sponsor__title">
+                  <div class="label-sponsor__text"><strong>media</strong><span>sponsor</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-20">
+              <div class="label-sponsor">
+                <div class="label-sponsor__logo"><img src="img/content/sponsor-9.svg"/></div>
+                <div class="label-sponsor__title">
+                  <div class="label-sponsor__text"><strong>finance</strong><span>sponsor</span></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <button class="section__slider-prev-s btn-slider-s">
+            <svg>
+              <use xlink:href="img/design/sprite.svg#icon-arrow-left"></use>
+            </svg>
+          </button>
+          <button class="section__slider-next-s btn-slider-s">
+            <svg>
+              <use xlink:href="img/design/sprite.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </ul>
+      </section>
+      <section id="contact" class="section contact">
+        <div id="map" class="contact__map"></div>
+        <div class="col--right col--right-alt">
           <h4 class="header-section header-section--primary">contact</h4>
           <h5 class="section__subject header-subject">London</h5>
           <h6 class="section__caption header-caption">Business Conference</h6>
           <p class="section__address label-caption">120 Main Street, Anytown, LN 12005</p>
           <form class="contact__form">
             <input placeholder="Name &amp; Surname" class="input">
-            <input placeholder="Email address" class="section__input input">
-            <textarea class="section__input input textarea">Message...</textarea>
+            <input placeholder="Email address" class="form__element input">
+            <textarea class="form__element input textarea">Message...</textarea>
             <div class="contact__submit">
               <button class="btn-send">send</button>
             </div>
@@ -885,28 +884,28 @@
         </ul>
         <h3 class="footer__logo logo logo--alt">evently</h3>
         <ul class="footer__social list-h">
-          <li class="list-h__item--social-alt">
+          <li class="list-h__item-social-alt">
             <button class="btn-social-alt">
               <svg>
                 <use xlink:href="img/design/sprite.svg#icon-fb-l"></use>
               </svg>
             </button>
           </li>
-          <li class="list-h__item--social-alt">
+          <li class="list-h__item-social-alt">
             <button class="btn-social-alt">
               <svg>
                 <use xlink:href="img/design/sprite.svg#icon-twitter-l"></use>
               </svg>
             </button>
           </li>
-          <li class="list-h__item--social-alt">
+          <li class="list-h__item-social-alt">
             <button class="btn-social-alt">
               <svg>
                 <use xlink:href="img/design/sprite.svg#icon-gplus-l"></use>
               </svg>
             </button>
           </li>
-          <li class="list-h__item--social-alt">
+          <li class="list-h__item-social-alt">
             <button class="btn-social-alt">
               <svg>
                 <use xlink:href="img/design/sprite.svg#icon-linkedin-l"></use>
@@ -914,18 +913,21 @@
             </button>
           </li>
         </ul>
+        <button onclick="smoothScroll('header')" class="footer__btn btn-ontop">
+          <svg>
+            <use xlink:href="img/design/sprite.svg#icon-arrow-down"></use>
+          </svg>
+        </button>
         <p class="footer__copyright label-copyright">All right reserved. Copyright &copy; 2016. <strong>Tosia Theme.</strong></p>
       </footer>
     </div>
     <script src="js/jquery-2.2.3.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhrh9_CT0TAl3bMAuAkVLbqamu4ydXevI&amp;sensor=false&amp;extension=.js"></script>
-    <script src="js/countdown.js"></script>
     <script src="js/custom-scrollbar.concat.min.js"></script>
-    <script src="js/speaker-slider.js"></script>
-    <script src="js/blog-slider.js"></script>
-    <script src="js/sponsor-slider.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/smooth-scroll.js"></script>
-    <script src="js/test.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/sliders.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhrh9_CT0TAl3bMAuAkVLbqamu4ydXevI&amp;sensor=false&amp;extension=.js"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>

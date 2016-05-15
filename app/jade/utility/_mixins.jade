@@ -4,18 +4,20 @@ mixin question(q, a)
     button.list-accordeon__btn.btn-accordeon
       svg
         use(xlink:href="img/design/sprite.svg#icon-arrow-down-s")
-    strong #{q}
-    p.p-answer #{a}
+    strong= q
+    p.p.p--answer= a
+
 mixin post(subject, author, date, ...text)
-  h5.section__subject.header-subject #{subject}
-  h6.section__caption.header-caption-alt #{author}
-  .section__text
+  h5.section__subject.header-subject= subject
+  h6.section__caption.header-caption-alt= author
+  .section__text.section__text--l
     each p in text
-      p.p-common-alt= p
+      p.p.p--common-alt= p
   .section__contacts
-    a.link-email(href="#") 
-      strong #{date}
+    a.link-common(href="#") 
+      strong= date
     +social
+
 mixin mainnav(navclass, navid)
   ul(id=navid class='list-h '+navclass)
     li.list-h__item
@@ -32,31 +34,31 @@ mixin mainnav(navclass, navid)
       a.link-nav(href="#sponsors" onclick="smoothScroll('sponsors')") sponsor
     li.list-h__item
       a.link-nav(href="#contact" onclick="smoothScroll('contact')") contact
+
 mixin plan(name, price, type, ...features)
   div(class='plan plan--'+type)
-    .plan__content
-      strong(class="plan__name-"+type)= name 
-      strong(class="plan__price-"+type)= price
-        sup 
-          span .00
-          strong  $
-      each feature in features
-        p(class="plan__feature plan__feature--"+type)
-          svg
-            use(xlink:href="img/design/sprite.svg#icon-check")
-          span= feature
+    strong(class="plan__name-"+type)= name 
+    strong(class="plan__price-"+type)= price
+      sup 
+        span .00
+        |  $
+    each feature in features
+      p(class="plan__feature plan__feature--"+type)
+        svg
+          use(xlink:href="img/design/sprite.svg#icon-check")
+        span= feature
           
 mixin social
   ul.section__social.list-h
-    li.list-h__item--social
+    li.list-h__item-social
       button.btn-social
         svg
           use(xlink:href="img/design/sprite.svg#icon-fb-s")
-    li.list-h__item--social
+    li.list-h__item-social
       button.btn-social
         svg
           use(xlink:href="img/design/sprite.svg#icon-twitter-s")
-    li.list-h__item--social
+    li.list-h__item-social
       button.btn-social
         svg
           use(xlink:href="img/design/sprite.svg#icon-gplus-s")
@@ -64,15 +66,32 @@ mixin social
       button.btn-social
         svg
           use(xlink:href="img/design/sprite.svg#icon-linkedin-s")
-          
+
+mixin sponsor(img, type)
+  .col-20
+    .label-sponsor
+      .label-sponsor__logo
+        img(src="img/content/sponsor-"+img+".svg")
+      .label-sponsor__title
+        .label-sponsor__text
+          strong= type
+          span sponsor
+
 mixin speaker(name, role, ename, edomain, ...bio)
-  h5.section__subject.header-subject #{name}  
-  h6.section__caption.header-caption-alt #{role}
-  .section__text
+  h5.section__subject.header-subject= name  
+  h6.section__caption.header-caption-alt= role
+  .section__text.section__text--l
     each p in bio
-      p.p-common-alt= p
+      p.p.p--common-alt= p
   .section__contacts
-    a.link-email(href="mailto:#") 
-      strong #{ename}
+    a.link-common(href="mailto:#") 
+      strong= ename
       | #{edomain}
     +social
+
+mixin timer-piece(id, caption)
+  li.list-h__item-timer
+    .label-timer-piece
+      .label-timer-piece__text
+        strong(id=id)
+        span= caption

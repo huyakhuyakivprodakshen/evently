@@ -1,85 +1,21 @@
 section#sponsors.sponsors
   h4.header-section.header-section--alt sponsors
-  #slider-sponsors
-    ul.list-slider.sponsors__badges
-      li.list-slider__item
-        .col-20
-          .label-sponsor
-            .label-sponsor__logo
-              img(src="img/content/sponsor-1.svg")
-            .label-sponsor__title
-              .label-sponsor__text
-                strong dinner
-                span sponsor
-        .col-20
-          .label-sponsor
-            .label-sponsor__logo
-              img(src="img/content/sponsor-2.svg")
-            .label-sponsor__title
-              .label-sponsor__text
-                strong location
-                span sponsor
-        .col-20
-          .label-sponsor
-            .label-sponsor__logo
-              img(src="img/content/sponsor-4.svg")
-            .label-sponsor__title
-              .label-sponsor__text
-                strong digital
-                span sponsor
-      li.list-slider__item
-        .col-20
-          .label-sponsor
-            .label-sponsor__logo
-              img(src="img/content/sponsor-3.svg")
-            .label-sponsor__title
-              .label-sponsor__text
-                strong dinner
-                span sponsor
-        .col-20
-          .label-sponsor
-            .label-sponsor__logo
-              img(src="img/content/sponsor-5.svg")
-            .label-sponsor__title
-              .label-sponsor__text
-                strong chillout
-                span sponsor
-        .col-20
-          .label-sponsor
-            .label-sponsor__logo
-              img(src="img/content/sponsor-6.svg")
-            .label-sponsor__title
-              .label-sponsor__text
-                strong fashion
-                span sponsor
-      li.list-slider__item
-        .col-20
-          .label-sponsor
-            .label-sponsor__logo
-              img(src="img/content/sponsor-7.svg")
-            .label-sponsor__title
-              .label-sponsor__text
-                strong luxury
-                span sponsor
-        .col-20
-          .label-sponsor
-            .label-sponsor__logo
-              img(src="img/content/sponsor-8.svg")
-            .label-sponsor__title
-              .label-sponsor__text
-                strong media
-                span sponsor
-        .col-20
-          .label-sponsor
-            .label-sponsor__logo
-              img(src="img/content/sponsor-9.svg")
-            .label-sponsor__title
-              .label-sponsor__text
-                strong finance
-                span sponsor
-    button.slider__prev-sm.btn-slider-sm
+  ul#slider-sponsors.sponsors__badges.list-slider
+    li.list-slider__item
+      +sponsor('3', 'dinner')
+      +sponsor('5', 'chillout')
+      +sponsor('4', 'digital')
+    li.list-slider__item
+      +sponsor('1', 'dinner')
+      +sponsor('2', 'location')
+      +sponsor('6', 'fashion')
+    li.list-slider__item
+      +sponsor('7', 'luxury')
+      +sponsor('8', 'media')
+      +sponsor('9', 'finance')
+    button.section__slider-prev-s.btn-slider-s
       svg
         use(xlink:href="img/design/sprite.svg#icon-arrow-left")
-    button.slider__next-sm.btn-slider-sm
+    button.section__slider-next-s.btn-slider-s
       svg
         use(xlink:href="img/design/sprite.svg#icon-arrow-right")

@@ -10,6 +10,7 @@
     top: 2px
   strong
     font-weight: 800
+
 .btn-burger
   +size(76px)
   text-align: center
@@ -26,7 +27,6 @@
     +border(2, $color-bg-decorate)
     background-color: transparent
     margin-bottom: 15px
-    position: relative
     animation: bounce 1.5s infinite ease-in-out
     &:hover
       animation: none
@@ -46,11 +46,12 @@
   svg
     +size(35px, 26px)
     fill: $color-bg-decorate
-.btn-slider-sm
+
+.btn-slider-s
   border: none
+  +border
   +size(25px)
   background-color: transparent
-  +border
   svg
     +size(25px)
     fill: $color-bg-decorate
@@ -106,7 +107,7 @@
   position: relative
   &:active
     top: 2px
-.button-page
+.btn-page
   font: 700 18px $font-family-robotoslab
   background: none
   border: none
@@ -114,14 +115,22 @@
   border-bottom: 2px solid
   padding-right: 30px
   line-height: .75
-.button-page--active
-  font: 700 30px $font-family-robotoslab
-  padding-right: 30px
-  background: none
-  line-height: .75
-  border: none
+.btn-page--active
+  font-size: 30px
   color: $color-text-decorate
   border-bottom: 6px solid
+.btn-ontop
+  +size(38px)
+  +border(2, $color-bg-decorate)
+  background: none
+  transform: rotate(180deg)
+  box-sizing: border-box
+  transition: margin-top .25s ease-out
+  svg
+    +size(18px, 18px)
+    fill: $color-text-decorate
+  &:hover
+    margin-top: -5px
 .btn-accordeon
   border: none
   background: none
