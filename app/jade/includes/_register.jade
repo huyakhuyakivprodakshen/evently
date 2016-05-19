@@ -11,17 +11,17 @@ section#register.register
         | @conference.co
       +social
   .col-50-s
-    form.register__form
-      input.input(placeholder="Name & Surname")
-      input.form__element.input(placeholder="Email Address")
-      input.form__element.input(placeholder="Phone Number")
+    form#form-register.register__form(action="register.php" method="post")
+      input.input(name="register-name" placeholder="Name & Surname")
+      input.form__element.input(name="register-email" placeholder="Email Address")
+      input.form__element.input(name="register-phone" placeholder="Phone Number")
       .select-wrapper.form__element
-        select
+        select(name="register-plan")
           option(disabled selected) Select your plan...
-          option $ 101 - Personal
-          option $ 114 - Business
-          option $ 120 - Company
-      button.form__element.btn-join Join the 
+          option(value="personal") $ 101 - Personal
+          option(value="business") $ 114 - Business
+          option(value="company") $ 120 - Company
+      button.form__element.btn-join(type="submit") Join the 
         strong Conference
         svg
           use(xlink:href="img/design/sprite.svg#icon-arrow-right")

@@ -10,7 +10,7 @@
   min-height: 700px
   &__header--gallery
     padding-left: 3.6%
-    z-index: 1
+    z-index: 99
     box-sizing: border-box
     width: 50%
     float: right
@@ -132,7 +132,6 @@
     float: left
     width: 50%
     height: 100%
-    z-index: -1
   &__img--2
     float: left
     width: 30%
@@ -141,6 +140,8 @@
     float: left
     width: 20%
     height: 290px
+  img.img
+    cursor: pointer
 .sponsors
   &__badges
     overflow: hidden

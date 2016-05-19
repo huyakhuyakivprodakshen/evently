@@ -404,19 +404,19 @@
           </div>
         </div>
         <div class="col-50-s">
-          <form class="register__form">
-            <input placeholder="Name &amp; Surname" class="input">
-            <input placeholder="Email Address" class="form__element input">
-            <input placeholder="Phone Number" class="form__element input">
+          <form id="form-register" action="register.php" method="post" class="register__form">
+            <input name="register-name" placeholder="Name &amp; Surname" class="input">
+            <input name="register-email" placeholder="Email Address" class="form__element input">
+            <input name="register-phone" placeholder="Phone Number" class="form__element input">
             <div class="select-wrapper form__element">
-              <select>
+              <select name="register-plan">
                 <option disabled selected>Select your plan...</option>
-                <option>$ 101 - Personal</option>
-                <option>$ 114 - Business</option>
-                <option>$ 120 - Company</option>
+                <option value="personal">$ 101 - Personal</option>
+                <option value="business">$ 114 - Business</option>
+                <option value="company">$ 120 - Company</option>
               </select>
             </div>
-            <button class="form__element btn-join">Join the <strong>Conference</strong>
+            <button type="submit" class="form__element btn-join">Join the <strong>Conference</strong>
               <svg>
                 <use xlink:href="img/design/sprite.svg#icon-arrow-right"></use>
               </svg>
@@ -747,10 +747,10 @@
         <div class="section__header--gallery">
           <h4 class="header-section header-section--primary">gallery</h4>
         </div>
-        <div class="gallery__img--1 img-wrapper"><img src="img/content/preview-1.jpg" class="img"><img src="img/content/preview-5.jpg" class="img"><img src="img/content/preview-9.jpg" class="img"></div>
-        <div class="gallery__img--2 img-wrapper"><img src="img/content/preview-2.jpg" class="img"><img src="img/content/preview-6.jpg" class="img"><img src="img/content/preview-10.jpg" class="img"></div>
-        <div class="gallery__img--3 img-wrapper"><img src="img/content/preview-3.jpg" class="img"><img src="img/content/preview-7.jpg" class="img"><img src="img/content/preview-11.jpg" class="img"></div>
-        <div class="gallery__img--4 img-wrapper"><img src="img/content/preview-4.jpg" class="img"><img src="img/content/preview-8.jpg" class="img"><img src="img/content/preview-12.jpg" class="img"></div>
+        <div class="gallery__img--1 img-wrapper"><img src="img/content/preview-1.jpg" data-title="Modern style" data-caption="proin quis pellentesque orci." data-full="gallery-1.jpg" class="img"><img src="img/content/preview-5.jpg" data-title="Future trands" data-caption="vestibulum congue elit vitae nunc hendrerit vehicula." data-full="gallery-5.jpg" class="img"><img src="img/content/preview-9.jpg" data-title="Teambuilding" data-caption="mauris non porttitor mi." data-full="gallery-9.jpg" class="img"></div>
+        <div class="gallery__img--2 img-wrapper"><img src="img/content/preview-2.jpg" data-title="Co-working" data-caption="congue nunc hendrerit elit vitae vehicula." data-full="gallery-2.jpg" class="img"><img src="img/content/preview-6.jpg" data-title="New idea" data-caption="fusce porttitor quis enim" data-full="gallery-6.jpg" class="img"><img src="img/content/preview-10.jpg" data-title="Imagination" data-caption="etiam id lacinia risus, at vehicula lectus." data-full="gallery-10.jpg" class="img"></div>
+        <div class="gallery__img--3 img-wrapper"><img src="img/content/preview-3.jpg" data-title="Johny Knoxville" data-caption="curabitur a neque odio." data-full="gallery-3.jpg" class="img"><img src="img/content/preview-7.jpg" data-title="Sarah Connor" data-caption="ut ac tempor lectus." data-full="gallery-7.jpg" class="img"><img src="img/content/preview-11.jpg" data-title="Ashley Soderberg" data-caption="maecenas facilisis, lectus a convallis volutpat, nisi est tristique ante, eget tempus nisl neque at arcu." data-full="gallery-11.jpg" class="img"></div>
+        <div class="gallery__img--4 img-wrapper"><img src="img/content/preview-4.jpg" data-title="Coffee break" data-caption="sed vitae tincidunt ante, vel lacinia odio." data-full="gallery-4.jpg" class="img"><img src="img/content/preview-8.jpg" data-title="Friendly workspace" data-caption="cras sit amet fermentum elit." data-full="gallery-8.jpg" class="img"><img src="img/content/preview-12.jpg" data-title="No fear" data-caption="morbi feugiat nisi nec ex convallis fringilla." data-full="gallery-12.jpg" class="img"></div>
         <button class="section__slider-prev btn-slider">
           <svg>
             <use xlink:href="img/design/sprite.svg#icon-arrow-left"></use>
@@ -862,12 +862,12 @@
           <h5 class="section__subject header-subject">London</h5>
           <h6 class="section__caption header-caption">Business Conference</h6>
           <p class="section__address label-caption">120 Main Street, Anytown, LN 12005</p>
-          <form class="contact__form">
-            <input placeholder="Name &amp; Surname" class="input">
-            <input placeholder="Email address" class="form__element input">
-            <textarea class="form__element input textarea">Message...</textarea>
+          <form id="form-contact" action="contact.php" method="post" class="contact__form">
+            <input name="contact-name" placeholder="Name &amp; Surname" class="input">
+            <input name="contact-email" placeholder="Email address" class="form__element input">
+            <textarea name="contact-message" placeholder="Message..." class="form__element input textarea"></textarea>
             <div class="contact__submit">
-              <button class="btn-send">send</button>
+              <button type="submit" class="btn-send">send</button>
             </div>
           </form>
         </div>
@@ -925,8 +925,10 @@
     <script src="js/custom-scrollbar.concat.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/countdown.js"></script>
+    <script src="js/appear.js"></script>
     <script src="js/common.js"></script>
     <script src="js/sliders.js"></script>
+    <script src="js/ajax.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhrh9_CT0TAl3bMAuAkVLbqamu4ydXevI&amp;sensor=false&amp;extension=.js"></script>
     <script src="js/map.js"></script>
   </body>

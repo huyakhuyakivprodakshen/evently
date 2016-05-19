@@ -5,9 +5,9 @@ section#contact.section.contact
     h5.section__subject.header-subject London
     h6.section__caption.header-caption Business Conference
     p.section__address.label-caption 120 Main Street, Anytown, LN 12005
-    form.contact__form
-      input.input(placeholder='Name & Surname')
-      input.form__element.input(placeholder='Email address')
-      textarea.form__element.input.textarea Message...
+    form#form-contact.contact__form(action="contact.php" method="post")
+      input.input(name='contact-name' placeholder='Name & Surname')
+      input.form__element.input(name='contact-email' placeholder='Email address')
+      textarea.form__element.input.textarea(name='contact-message' placeholder='Message...')
       .contact__submit
-        button.btn-send send
+        button.btn-send(type="submit") send

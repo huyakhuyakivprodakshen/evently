@@ -15,3 +15,52 @@
 .hidden
   opacity: 0
   transform: scale3d(.3, .3, .3)
+.hidden-section
+  opacity: 0
+  transform: translate3d(0, 5%, 0)
+.notice
+  padding: 15px 4% 30px 4%
+  text-align: center
+  font-size: 16px
+  z-index: 999
+  width: 100%
+  box-sizing: border-box
+  background-color: $color-bg-decorate
+  position: fixed
+  top: 0
+  display: none
+  cursor: pointer
+  svg
+    +size(16px)
+    fill: $color-bg-secondary
+    position: absolute
+    +center('h')
+    bottom: 10px
+.modal
+  background-color: transparentize($color-bg-primary, .2)
+  position: fixed
+  z-index: 999
+  +size(100%)
+  opacity: 0
+  &__inner
+    +center
+    background-color: $color-bg-secondary
+    padding: 20px
+    box-sizing: border-box
+    width: 90%
+    max-width: 960px
+    img
+      width: 100%
+      margin-bottom: 15px
+      height: auto
+  span
+    color: $color-text-secondary
+    font-size: 16px
+  strong
+    color: $color-text-alt
+    font-size: 16px
+    font-weight: 700
+  &__btn
+    position: absolute
+    top: -40px
+    right: 0

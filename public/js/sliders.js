@@ -143,6 +143,7 @@
   var prevSet = numSets-1;
   var currentSet = 0;
   var nextSet = 1;
+  var effects = ['slideOutLeft','slideOutRight','slideOutUp','slideOutDown'];
 
   $.each(set, function(i, item){
     $(item[currentSet]).css('z-index','2');
@@ -150,48 +151,72 @@
 
   btnPrev.click(function(){
 
+    btnPrev.prop("disabled", true);
+    btnNext.prop("disabled", true);
+    shuffle(effects);
+
     $.each(set, function(i, item) {
       $(item[currentSet]).css('z-index','2');
       $(item[prevSet]).css('z-index','1');
-      $(item[currentSet]).attr('class','img animated slideOutLeft');
+      $(item[currentSet]).attr('class','img animated-long');
+      setTimeout(function(){
+        $(item[currentSet]).addClass(effects[i]);
+      }, i*100);
     });
 
     setTimeout(function(){
       $.each(set, function(i, item) {
         $(item[currentSet]).css('z-index','0');
         $(item[currentSet]).attr('class','img');
-      }, 800);
-    });
-
-    nextSet = currentSet;
-    currentSet = prevSet;
-    prevSet--;
-    if(prevSet == -1) {
-      prevSet = numSets-1;
-    }
+      });
+      nextSet = currentSet;
+      currentSet = prevSet;
+      prevSet--;
+      if(prevSet == -1) {
+        prevSet = numSets-1;
+      }
+      btnPrev.prop("disabled", false);
+      btnNext.prop("disabled", false);
+    }, 1200);
   });
 
   btnNext.click(function(){
 
+    btnPrev.prop("disabled", true);
+    btnNext.prop("disabled", true);
+    shuffle(effects);
+
     $.each(set, function(i, item) {
       $(item[currentSet]).css('z-index','2');
       $(item[nextSet]).css('z-index','1');
-      $(item[currentSet]).attr('class','img animated slideOutRight');
+      $(item[currentSet]).attr('class','img animated-long');
+      setTimeout(function(){
+        $(item[currentSet]).addClass(effects[i]);
+      }, i*100);
     });
-
     setTimeout(function(){
       $.each(set, function(i, item) {
         $(item[currentSet]).css('z-index','0');
         $(item[currentSet]).attr('class','img');
-      }, 800);
-    });
-
-    prevSet = currentSet;
-    currentSet = nextSet;
-    nextSet++;
-    if(nextSet == numSets) {
-      nextSet = 0;
-    }
+      });
+      prevSet = currentSet;
+      currentSet = nextSet;
+      nextSet++;
+      if(nextSet == numSets) {
+        nextSet = 0;
+      }
+      btnPrev.prop("disabled", false);
+      btnNext.prop("disabled", false);
+    }, 1200);
   });
 
+  function shuffle(a) {
+    var j, x, i;
+    for (i = a.length; i; i -= 1) {
+      j = Math.floor(Math.random() * i);
+      x = a[i - 1];
+      a[i - 1] = a[j];
+      a[j] = x;
+    }
+  }
 })();

@@ -4,6 +4,7 @@
   var winWidth = $(window).width();
   var center = (winWidth>640) ? -0.115684 + winWidth/4*0.0001715 : -0.115684;
 
+
   function init() {
     var mapOptions = {
           center: new google.maps.LatLng(51.515000, center),
