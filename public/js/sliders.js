@@ -177,7 +177,7 @@
       }
       btnPrev.prop("disabled", false);
       btnNext.prop("disabled", false);
-    }, 1200);
+    }, 1000);
   });
 
   btnNext.click(function(){
@@ -207,7 +207,7 @@
       }
       btnPrev.prop("disabled", false);
       btnNext.prop("disabled", false);
-    }, 1200);
+    }, 1000);
   });
 
   function shuffle(a) {

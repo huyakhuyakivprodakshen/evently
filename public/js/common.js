@@ -61,6 +61,7 @@
   });
 
   $('#btn-burger').click(function(){
+    $(this).toggleClass('rotated');
     $('#header-nav').slideToggle();
     if (hidden) {
       shrinkHeader();
@@ -97,12 +98,10 @@
 
 
 $(function(){
-
-  var sections = $('.section'),
-      inited = false;
+  var sections = $('.section')
   sections.addClass('hidden-section');
   sections.appear({ force_process: true });
   sections.on('appear', function() {
     $(this).addClass('animated fadeInUp');
-  });
-})
+  })
+});

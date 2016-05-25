@@ -2,10 +2,6 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, li, form, label, a
   margin: 0;
   padding: 0; }
 
-html, body {
-  width: 100%;
-  height: 100%; }
-
 body {
   font-size: 62.5%;
   line-height: 1;
@@ -158,6 +154,9 @@ button {
   opacity: 0;
   transform: scale3d(0.3, 0.3, 0.3); }
 
+.rotated {
+  transform: rotate(270deg); }
+
 .hidden-section {
   opacity: 0;
   transform: translate3d(0, 5%, 0); }
@@ -179,17 +178,19 @@ button {
     height: 16px;
     fill: #fff;
     position: absolute;
-    position: absolute;
     left: 50%;
-    transform: translate(-50%);
     bottom: 10px; }
 
 .modal {
   background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: fixed;
   z-index: 999;
   width: 100%;
-  height: 100%;
+  height: 9999px;
   opacity: 0; }
   .modal__inner {
     position: absolute;
@@ -222,7 +223,7 @@ button {
   animation-fill-mode: both; }
 
 .animated-long {
-  animation-duration: 1.2s;
+  animation-duration: .6s;
   animation-fill-mode: both; }
 
 @keyframes bounce {
@@ -994,7 +995,9 @@ button {
   border: 3px solid #fff;
   background: none;
   font-size: 40px;
-  color: #fff; }
+  line-height: 70px;
+  color: #fff;
+  transition: all .4s ease-in-out; }
 
 .btn-scroll {
   display: inline-block;
@@ -1138,11 +1141,12 @@ button {
 
 .btn-close {
   border: none;
-  background: none; }
-  .btn-close svg {
+  background: none;
+  width: 20px;
+  height: 20px; }
+  .btn-close img {
     width: 20px;
-    height: 20px;
-    fill: #fff; }
+    height: 20px; }
 
 .p {
   text-align: justify;
@@ -1246,7 +1250,7 @@ button {
   color: #6e6e6e; }
 
 .input--invalid {
-  border: 2px solid red; }
+  border: 2px solid tomato; }
 
 .textarea {
   height: 90px;
